@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>介绍</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--主区域-->
+    <dev class="flex flex1 column">
+      <!--头部栏-->
+      <dev style="height: 60px; z-index: 1" class="baise"></dev>
+      <!--内容区-->
+      <dev style="overflow: auto" class="flex1 flex neirong">
+        <dev style="flex: 3" class="flex column mg8">
+          <!--列表区-->
+          <dev class="flex column">
+            <!--列表项-->
+            <dev style="height: 800px" class="baise mg8"></dev>
+          </dev>
+        </dev>
+      </dev>
+    </dev>
+  </body>
+</html>

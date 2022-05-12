@@ -1,0 +1,234 @@
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的小组</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /** {
+    border: 1px solid black;
+  } */
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .yinying {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid #cdb496;
+        font-size: 16px;
+        color: #000000;
+      }
+      .juzhong {
+        justify-content: center;
+        align-items: center;
+      }
+      .mg15 {
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <dev class="flex flex1 column">
+      <!--头部栏-->
+      <dev style="height: 100px; z-index: 1" class="baise yinying flex">
+        <dev
+          style="flex: 1; justify-content: center; align-items: center"
+          class="flex"
+        >
+          <img
+            src="../picture/logo.png"
+            width="60px"
+            height="60px"
+            alt="头像"
+          />
+          <div
+            style="font-size: 25px; color: #cdb496; width: 150px"
+            class="mg8"
+          >
+            陈志航的主页
+          </div>
+        </dev>
+        <div
+          style="
+            flex: 2;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+          "
+          class="flex"
+        >
+          <a
+            style="
+              padding: 10px;
+              color: rgb(115, 123, 123);
+              text-decoration: none;
+            "
+            class="mg8"
+            href="../index.html"
+          >
+            首页 </a
+          ><a
+            style="padding: 10px; text-decoration: none"
+            class="mg8 daohang"
+            href="../html/xiaozu.html"
+            >小组</a
+          >
+          <a
+            style="
+              padding: 10px;
+              color: rgb(115, 123, 123);
+              text-decoration: none;
+            "
+            class="mg8"
+            href="../html/jieshao.html"
+          >
+            介绍
+          </a>
+        </div>
+      </dev>
+      <!--内容区-->
+      <div style="overflow: auto" class="flex1 flex neirong">
+        <div style="flex: 1; margin: 0" class="flex column">
+          <!--列表区-->
+          <dev class="flex column">
+            <!--列表项-->
+            <div
+              style="
+                height: 200vh;
+                padding: 30px;
+                align-items: center;
+                margin: 0;
+              "
+              class="flex column baise mg8 yinying"
+            >
+              <div style="display: flex; margin-top: 100px">
+                <div style="flex: 1">
+                  <h1 style="font-family: fantasy">My Group</h1>
+                </div>
+                <p
+                  style="
+                    flex: 2;
+                    font-size: 20px;
+                    color: #868383;
+                    line-height: 1.8;
+                  "
+                >
+                  我们是来自元岛一班 第八小组的 六位学生，起因是观看了bilibili
+                  up主 康文昌
+                  的编程视频，并加入学习群，进行了分组互相讨论学习，在2022年5月2日我们的第八小组六人满员。<br />
+                  并由 @摩尔根的果蝇
+                  首次提出第一个小组暂定名称“元岛妙妙屋”，此外 @浴曲
+                  同学提出的“浴曲最帅”被暂时驳回。<br />
+                  我们在空余时间将相互监督，讨论编程与计算机知识，一起学习。<br />
+                </p>
+              </div>
+              <div
+                style="height: 100vh; width: 100%; margin-top: 100px"
+                class="flex mg8"
+              >
+                <div class="flex1">
+                  <h1 style="margin: 0px">成员</h1>
+                  <p style="color: #868383; margin: 0">元岛妙妙屋</p>
+                </div>
+                <div style="flex: 3; height: 100vh" class="column">
+                  <div
+                    class="flex1 flex"
+                    style="align-items: center; justify-content: space-around"
+                  >
+                    <div
+                      style="height: 200px; width: 200px; background: #eee"
+                      class="mg8 flex column"
+                    >
+                      <h1>Const</h1>
+                      <a
+                        href="https://z01-7gtq8n7j501c0561-1302799762.tcloudbaseapp.com/"
+                        rel="noopener noreferrer"
+                        style="color: #cdb496"
+                        class="mg15"
+                        >个人网站</a
+                      >
+                    </div>
+                    <div
+                      style="height: 200px; width: 200px; background: #eee"
+                      class="mg8 flex column"
+                    >
+                      <h1>浴曲</h1>
+                      <a
+                        href="https://lingering-rhythm-8f4nvkpcdf7bddc-1311405376.tcloudbaseapp.com/"
+                        rel="noopener noreferrer"
+                        style="color: #cdb496"
+                        class="mg15"
+                        >个人网站</a
+                      >
+                    </div>
+                    <div
+                      style="height: 200px; width: 200px; background: #eee"
+                      class="mg8 flex column"
+                    >
+                      <h1>织毛线的猫</h1>
+                      <a
+                        href="https://lilakiro.github.io/"
+                        rel="noopener noreferrer"
+                        style="color: #cdb496"
+                        class="mg15"
+                        >个人网站</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="flex1 flex"
+                    style="align-items: center; justify-content: space-around"
+                  >
+                    <div
+                      style="height: 200px; width: 200px; background: #eee"
+                      class="mg8 flex column"
+                    >
+                      <h1>摩尔根的果蝇</h1>
+                    </div>
+                    <div
+                      style="height: 200px; width: 200px; background: #eee"
+                      class="mg8 flex column"
+                    >
+                      <h1>Coleste</h1>
+                    </div>
+                    <div
+                      style="height: 200px; width: 200px; background: #eee"
+                      class="mg8 flex column"
+                    >
+                      <h1>Pickle Mundus</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </dev>
+        </div>
+      </div>
+    </dev>
+  </body>
+</html>

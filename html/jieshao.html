@@ -4,51 +4,171 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>介绍</title>
+    <link rel="shortcut  icon" href="picture/favicon.png" type="image/x-icon" />
+    <title>陈志航的主页</title>
     <style>
+      /* * {
+        border: 1px solid black;
+      } */
       body {
-        margin: 0;
         height: 100vh;
-        background-color: #eee;
+        margin: 0;
       }
       .flex {
         display: flex;
       }
-      .baise {
-        background-color: white;
+      .column {
+        flex-direction: column;
       }
       .flex1 {
         flex: 1;
       }
-      .column {
-        flex-direction: column;
+      .daohang {
+        border-bottom: 1px solid #cdb496;
+        font-size: 16px;
+        color: #000000;
+        padding: 10px;
+      }
+      .yinying {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+          rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
       }
       .mg8 {
         margin: 8px;
       }
-      .mgr8 {
-        margin-right: 8px;
-      }
-      .mgt8 {
-        margin-top: 8px;
-      }
     </style>
   </head>
-  <body class="flex">
-    <!--主区域-->
-    <dev class="flex flex1 column">
-      <!--头部栏-->
-      <dev style="height: 60px; z-index: 1" class="baise"></dev>
-      <!--内容区-->
-      <dev style="overflow: auto" class="flex1 flex neirong">
-        <dev style="flex: 3" class="flex column mg8">
-          <!--列表区-->
-          <dev class="flex column">
-            <!--列表项-->
-            <dev style="height: 800px" class="baise mg8"></dev>
-          </dev>
-        </dev>
-      </dev>
-    </dev>
+  <body class="flex column">
+    <!--顶部栏-->
+    <div
+      style="height: 80px; background: white; z-index: 1"
+      class="flex yinying"
+    >
+      <!--Logo区域-->
+      <div
+        style="
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          min-width: 100px;
+          margin: 8px;
+        "
+        class="flex column"
+      >
+        <p style="font-size: 20px"><b>CZH'S HOME PAGE</b></p>
+      </div>
+      <!--导航区域-->
+      <div
+        style="flex: 2; justify-content: center; align-items: center"
+        class="flex"
+      >
+        <div
+          style="
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 70px;
+          "
+          class="flex"
+        >
+          <a
+            style="text-decoration: none; color: rgb(115, 123, 123)"
+            class="flex"
+            href="./index.html"
+            >首页
+          </a>
+        </div>
+        <div
+          style="
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 70px;
+          "
+          class="flex"
+        >
+          <a
+            style="text-decoration: none; color: rgb(115, 123, 123)"
+            class="flex"
+            href="./index.html"
+            >小组
+          </a>
+        </div>
+        <div
+          style="
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 70px;
+          "
+          class="flex"
+        >
+          <a
+            style="text-decoration: none; color: rgb(115, 123, 123)"
+            class="flex daohang"
+            href="./index.html"
+            >介绍
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      style="background-color: rgb(255, 255, 255); overflow: auto"
+      class="flex1 column"
+    >
+      <div style="height: auto" class="flex column mg8">
+        <img
+          alt=""
+          src="../picture/jieshao/toutu.jpg"
+          style="align-self: center; height: 300px"
+        />
+      </div>
+      <div style="height: 1000px; margin: 10px" class="flex column mg8">
+        <div
+          style="
+            height: 700px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+          "
+        >
+          <div style="display: flex; align-self: center">
+            <h1>小破站的记事表</h1>
+          </div>
+          <div
+            style="
+              margin: 30px;
+              line-height: 2;
+              align-self: center;
+              overflow: inherit;
+            "
+          >
+            <h2>0.5 版本</h2>
+            <div class="flex">
+              <p style="margin: 8px">2022/5/12</p>
+              <p style="margin: 8px">
+                上线github 并拥有自定义二级域名 const808.github.io
+              </p>
+            </div>
+            <div class="flex">
+              <p style="margin: 8px">2022/5/01</p>
+              <p style="margin: 8px">界面美化</p>
+            </div>
+
+            <h2>0.1 版本</h2>
+            <div class="flex">
+              <p style="margin: 8px">2022/4/12</p>
+              <p style="margin: 8px">初次上线于 腾讯云</p>
+            </div>
+            <div class="flex">
+              <p style="margin: 8px">2022/4/10</p>
+              <p style="margin: 8px">
+                开始学习网页的相关知识,并在本地敲下了第一个<br />“Hello world”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

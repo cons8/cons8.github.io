@@ -30,7 +30,18 @@
       .daohang {
         font-family: fantasy;
         font-size: larger;
+        height: 40px;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        /*通过控制行高使文本居中*/
+        line-height: 30px;
       }
+      daohang:hover {
+        background-color: black;
+        color: white;
+      }
+
       @media (max-width: 600px) {
         .Low_neirong {
           flex-direction: column;
@@ -60,7 +71,7 @@
         style="flex: 1; align-items: center; justify-content: center"
         class="flex"
       >
-        <a href=""
+        <a href="" title="自己画的Logo"
           ><img
             src="./images/logo.png"
             height="50px"
@@ -73,13 +84,24 @@
         class="flex"
       >
         <div class="daohangkuang" style="display: flex">
-          <p class="daohang" style="">HOME</p>
+          <daohang class="daohang" title="首页（本页面）">HOME</daohang>
         </div>
         <div class="daohangkuang">
-          <p class="daohang">ABOUT</p>
+          <daohang
+            title="点击跳转到介绍页面"
+            class="daohang"
+            onclick="alert('页面正在建设中')"
+            >ABOUT</daohang
+          >
         </div>
         <div class="daohangkuang">
-          <p class="daohang">MUSEUM</p>
+          <daohang
+            class="daohang"
+            onclick="alert('页面正在建设中')"
+            title="我的时间博物馆"
+            >MUSEUM</daohang
+          >
+          <!--window.loction.href-->
         </div>
       </daohangqu>
     </daohanglan>
@@ -119,6 +141,7 @@
           background-color: #a5dbc9;
           margin: 8px;
           border-radius: 20px;
+          padding: 16px;
         "
       ></div>
 
@@ -126,9 +149,11 @@
         style="
           height: 200px;
           width: 300px;
-          background-color: #a3acdcbd;
+          background-color: #828fe7bd;
           margin: 8px;
           border-radius: 20px;
+          color: white;
+          padding: 16px;
         "
       >
         <p style="text-align: center">boatTab</p>
@@ -139,9 +164,10 @@
         style="
           height: 200px;
           width: 300px;
-          background-color: #aa8ad3bc;
+          background-color: #a88ecabc;
           margin: 8px;
           border-radius: 20px;
+          padding: 16px;
         "
       ></div>
       <div
@@ -151,6 +177,7 @@
           background-color: #d3ac8abc;
           margin: 8px;
           border-radius: 20px;
+          padding: 16px;
         "
       ></div>
     </neirong>

@@ -1,0 +1,159 @@
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>陈志航的主页</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+      /* * {
+  border: 1px solid black;
+} */
+      .flex {
+        display: flex;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .daohangkuang {
+        height: 80px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .daohang {
+        font-family: fantasy;
+        font-size: larger;
+      }
+      @media (max-width: 600px) {
+        .Low_neirong {
+          flex-direction: column;
+        }
+        .Low_height {
+          height: 90%;
+          width: 90%;
+        }
+        .Low_logo {
+          height: 40px;
+          width: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body style="display: flex; flex-direction: column">
+    <daohanglan
+      class="flex"
+      style="
+        background-color: white;
+        height: 100px;
+        padding: 8px;
+        margin-bottom: 16px;
+      "
+    >
+      <logoqu
+        style="flex: 1; align-items: center; justify-content: center"
+        class="flex"
+      >
+        <a href=""
+          ><img
+            src="./images/logo.png"
+            height="50px"
+            width="50px"
+            class="Low_logo"
+        /></a>
+      </logoqu>
+      <daohangqu
+        style="flex: 3; justify-content: space-around; align-items: center"
+        class="flex"
+      >
+        <div class="daohangkuang" style="display: flex">
+          <p class="daohang" style="">HOME</p>
+        </div>
+        <div class="daohangkuang">
+          <p class="daohang">ABOUT</p>
+        </div>
+        <div class="daohangkuang">
+          <p class="daohang">MUSEUM</p>
+        </div>
+      </daohangqu>
+    </daohanglan>
+    <neirong
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        z-index: 1;
+      "
+    >
+      <!--首页展示-->
+      <div
+        style="width: 100%; align-items: center; justify-content: center"
+        class="flex Low_neirong"
+      >
+        <div class="flex">
+          <img
+            src="https://s1.328888.xyz/2022/08/11/6u4ci.png"
+            alt="图片"
+            style="max-height: 400px"
+            class="low_height mg8"
+          />
+        </div>
+        <div
+          class="flex mg8"
+          style="height: 200px; flex-direction: column; align-items: center"
+        >
+          <p style="font-size: 40px">HELLO WORLD</p>
+          <p>“要学会做科学的苦工。其次，要谦虚。第三要有热情。——巴甫洛夫”</p>
+        </div>
+      </div>
+      <div
+        style="
+          height: 200px;
+          width: 300px;
+          background-color: #a5dbc9;
+          margin: 8px;
+          border-radius: 20px;
+        "
+      ></div>
+
+      <div
+        style="
+          height: 200px;
+          width: 300px;
+          background-color: #a3acdcbd;
+          margin: 8px;
+          border-radius: 20px;
+        "
+      >
+        <p style="text-align: center">boatTab</p>
+        <p>一个即将编写的起始页</p>
+        <p>学习范本 https://www.midorg.com/tab.html</p>
+      </div>
+      <div
+        style="
+          height: 200px;
+          width: 300px;
+          background-color: #aa8ad3bc;
+          margin: 8px;
+          border-radius: 20px;
+        "
+      ></div>
+      <div
+        style="
+          height: 200px;
+          width: 300px;
+          background-color: #d3ac8abc;
+          margin: 8px;
+          border-radius: 20px;
+        "
+      ></div>
+    </neirong>
+    <dibulan style="margin: 32px">
+      <p style="text-align: center">1.0 版本 网页测试中</p>
+    </dibulan>
+  </body>
+</html>

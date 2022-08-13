@@ -17,6 +17,9 @@
       .flex {
         display: flex;
       }
+      .column {
+        flex-direction: column;
+      }
       .mg8 {
         margin: 8px;
       }
@@ -41,7 +44,7 @@
         background-color: black;
         color: white;
       }
-      a{
+      a {
         color: white;
       }
 
@@ -56,6 +59,9 @@
         .Low_logo {
           height: 40px;
           width: 40px;
+        }
+        .Low_dibu {
+          flex-direction: column;
         }
       }
     </style>
@@ -131,10 +137,12 @@
         </div>
         <div
           class="flex mg8"
-          style="height: 200px; flex-direction: column; align-items: center"
+          style="flex-direction: column; align-items: center"
         >
           <p style="font-size: 40px">HELLO WORLD</p>
-          <p style="font-family:仿宋;font-size: 20px;">“要学会做科学的苦工。其次，要谦虚。第三要有热情。——巴甫洛夫”</p>
+          <p style="font-family: 仿宋; font-size: 20px">
+            “要学会做科学的苦工。其次，要谦虚。第三要有热情。——巴甫洛夫”
+          </p>
         </div>
       </div>
       <div
@@ -185,8 +193,57 @@
         "
       ></div>
     </neirong>
-    <dibulan style="margin: 32px">
-      <p style="text-align: center">1.0 版本 网页测试中</p>
+
+    <dibulan class="flex column" style="margin-top: 100px;">
+      <div class="flex Low_dibu" style="flex-wrap: wrap">
+        <!--左区-->
+        <div
+          class="flex column"
+          style="
+            flex: 1;
+            background-color: white;
+            align-items: center;
+            margin: 30px
+          "
+        >
+          <div><img src="./images/logo.png" /></div>
+          <p>ZH'PAGE v1.0 beta</p>
+          <p>------</p>
+
+          <p style="font-size: small; color: rgb(64, 57, 57)">
+            2022/4/10-2022/8/14
+          </p>
+          <p>CHENZHIHANG</p>
+          <p>开放 平等 协作 分享</p>
+          <div style="border: 1px solid #ccc"></div>
+          <div>
+            <img src="./images/share.png" height="35px" />
+            <img src="./images/Notion.png" height="35px" />
+            <img src="./images/bilibili.png" height="35px" />
+          </div>
+          <p style="font-size: small">IN DOING WE LEARN</p>
+        </div>
+        <!--右区-->
+        <div style="flex: 3; background-color: black;padding: 40px;">
+          <div>
+            <p style="color:white;font-size: 40px;">1.0 版本<br>网页测试中</p>
+          </div>
+          <div class="flex">
+            <div style="flex:1;">
+              <p style="color:white">友情链接</p>
+              <p style="color:white">测试</p>
+              <p style="color:white">测试</p>
+              <p style="color:white">测试</p>
+            </div>
+            <div style="flex: 1;">
+              <p style="color: white">其它</p>
+              <p style="color:white">测试</p>
+              <p style="color:white">测试</p>
+              <p style="color:white">测试</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </dibulan>
   </body>
 </html>

@@ -65,6 +65,21 @@
         }
       }
     </style>
+    <script>
+      function copyToClip(content, message) {
+        var aux = document.createElement("input");
+        aux.setAttribute("value", content);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+        if (message == null) {
+          alert("网站链接复制成功，分享给别人吧");
+        } else {
+          alert(message);
+        }
+      }
+    </script>
   </head>
   <body style="display: flex; flex-direction: column">
     <daohanglan
@@ -194,7 +209,7 @@
       ></div>
     </neirong>
 
-    <dibulan class="flex column" style="margin-top: 100px;">
+    <dibulan class="flex column" style="margin-top: 100px">
       <div class="flex Low_dibu" style="flex-wrap: wrap">
         <!--左区-->
         <div
@@ -203,7 +218,7 @@
             flex: 1;
             background-color: white;
             align-items: center;
-            margin: 30px
+            margin: 30px;
           "
         >
           <div><img src="./images/logo.png" /></div>
@@ -217,29 +232,31 @@
           <p>开放 平等 协作 分享</p>
           <div style="border: 1px solid #ccc"></div>
           <div>
-            <img src="./images/share.png" height="35px" />
+            <img src="./images/share.png" height="35px" onclick="copyToClip('https://const808.github.io/')" />
             <img src="./images/Notion.png" height="35px" />
             <img src="./images/bilibili.png" height="35px" />
           </div>
           <p style="font-size: small">IN DOING WE LEARN</p>
         </div>
         <!--右区-->
-        <div style="flex: 3; background-color: black;padding: 40px;">
+        <div style="flex: 3; background-color: black; padding: 40px">
           <div>
-            <p style="color:white;font-size: 40px;">1.0 版本<br>网页测试中</p>
+            <p style="color: white; font-size: 40px">
+              1.0 版本<br />网页测试中
+            </p>
           </div>
           <div class="flex">
-            <div style="flex:1;">
-              <p style="color:white">友情链接</p>
-              <p style="color:white">测试</p>
-              <p style="color:white">测试</p>
-              <p style="color:white">测试</p>
+            <div style="flex: 1">
+              <p style="color: white">友情链接</p>
+              <p style="color: white">测试</p>
+              <p style="color: white">测试</p>
+              <p style="color: white">测试</p>
             </div>
-            <div style="flex: 1;">
+            <div style="flex: 1">
               <p style="color: white">其它</p>
-              <p style="color:white">测试</p>
-              <p style="color:white">测试</p>
-              <p style="color:white">测试</p>
+              <p style="color: white">测试</p>
+              <p style="color: white">测试</p>
+              <p style="color: white">测试</p>
             </div>
           </div>
         </div>

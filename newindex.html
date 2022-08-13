@@ -66,6 +66,11 @@
       }
     </style>
     <script>
+      /**
+       * 复制单行内容到粘贴板
+       * content : 需要复制的内容
+       * message : 复制完后的提示，不传则默认提示"复制成功"
+       */
       function copyToClip(content, message) {
         var aux = document.createElement("input");
         aux.setAttribute("value", content);
@@ -74,7 +79,7 @@
         document.execCommand("copy");
         document.body.removeChild(aux);
         if (message == null) {
-          alert("网站链接复制成功，分享给别人吧");
+          alert("复制成功");
         } else {
           alert(message);
         }
@@ -232,7 +237,11 @@
           <p>开放 平等 协作 分享</p>
           <div style="border: 1px solid #ccc"></div>
           <div>
-            <img src="./images/share.png" height="35px" onclick="copyToClip('https://const808.github.io/')" />
+            <img
+              src="./images/share.png"
+              height="35px"
+              onclick="copyToClip('https://const808.github.io/','网站链接已经复制成功了，分享给别人吧！')"
+            />
             <img src="./images/Notion.png" height="35px" />
             <img src="./images/bilibili.png" height="35px" />
           </div>

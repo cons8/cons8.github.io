@@ -40,6 +40,12 @@
         /*通过控制行高使文本居中*/
         line-height: 30px;
       }
+      .yinjie {
+        height: 80px;
+        width: 80px;
+        margin: 8px;
+        border-radius: 20px;
+      }
       daohang:hover {
         background-color: black;
         color: white;
@@ -144,12 +150,17 @@
     >
       <!--首页展示-->
       <div
-        style="width: 100%; align-items: center; justify-content: center"
+        style="
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 50px;
+        "
         class="flex Low_neirong"
       >
         <div class="flex">
           <img
-            src="https://s1.328888.xyz/2022/08/11/6u4ci.png"
+            src="https://s3.328888.xyz/2022/08/17/hdgXj.png"
             alt="图片"
             style="max-height: 400px"
             class="low_height mg8"
@@ -159,7 +170,7 @@
           class="flex mg8"
           style="flex-direction: column; align-items: center"
         >
-          <p style="font-size: 40px">HELLO WORLD</p>
+          <p style="font-size: 50px">HELLO WORLD</p>
           <p style="font-family: 仿宋; font-size: 20px">
             “要学会做科学的苦工。其次，要谦虚。第三要有热情。——巴甫洛夫”
           </p>
@@ -177,66 +188,111 @@
       >
         <div
           style="
-            height: 200px;
-            width: 300px;
-            background-color: #a5dbc9;
+            height: 250px;
+            width: 60%;
+            background-color: #374b4d;
             margin: 8px;
             border-radius: 20px;
             padding: 16px;
+            display: flex;
           "
         >
-          <iframe
-            frameborder="no"
-            border="0"
-            marginwidth="0"
-            marginheight="0"
-            width="100%"
-            height="86"
-            src="https://music.163.com/outchain/player?type=2&id=1941828051&auto=1&height=66"
-          ></iframe>
+          <yinjie
+            class="yinjie"
+            style="background-color: rgb(173, 64, 64)"
+          ></yinjie>
+          <yinjie
+            class="yinjie"
+            style="background-color: rgb(206, 214, 81)"
+          ></yinjie
+          ><yinjie
+            class="yinjie"
+            style="background-color: rgb(21, 182, 69)"
+          ></yinjie>
         </div>
 
         <div
           style="
-            height: 200px;
+            height: 250px;
             width: 300px;
-            background-color: #828fe7bd;
+            background-color: #0d22aabd;
             margin: 8px;
             border-radius: 20px;
             color: white;
             padding: 16px;
           "
         >
-          <p style="text-align: center">boatTab</p>
+          <p style="text-align: center"><b>boat Tab</b></p>
           <p>一个即将编写的起始页</p>
           <p>学习范本 https://www.midorg.com/tab.html</p>
-          <a href="./html/boatTab.html">boatTab 预览</a>
+          <a href="./html/boatTab.html">boatTab 预览一下</a>
         </div>
         <div
           style="
-            height: 200px;
-            width: 300px;
-            background-color: #a88ecabc;
-            margin: 8px;
-            border-radius: 20px;
-            padding: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
           "
         >
-          <img src="https://s1.328888.xyz/2022/08/14/TUYxw.png" height="70px" />
-          <p style="color: white">新消息</p>
-          <p style="color: white">1.0.0.0 版本 启用</p>
+          <div style="width: 30%; margin-right: 120px">
+            <img
+              src="https://s3.328888.xyz/2022/08/17/hdsi6.png"
+              height="300px"
+            />
+          </div>
+
+          <div
+            style="
+              height: 300px;
+              width: 70vh;
+              background-color: #e1d126bc;
+              margin: 8px;
+              border-radius: 20px;
+              padding: 16px;
+              display: flex;
+              flex-direction: column;
+            "
+          >
+            <div>
+              <p style="font-size: 40px">
+                <b>文明施工</b><br /><b>抓紧建设 !!!</b>
+              </p>
+            </div>
+
+            <div style="align-self: end">
+              <img
+                src="https://s3.328888.xyz/2022/08/17/hde3w.png"
+                height="130px"
+              />
+            </div>
+          </div>
         </div>
+
+        <!--消息区-->
         <div
           style="
-            height: 200px;
-            width: 300px;
-            background-color: #ce9370bc;
+            display: flex;
+            height: 80px;
+            width: 70%;
             margin: 8px;
             border-radius: 20px;
             padding: 16px;
+            border: 3px solid black;
           "
-        ></div>
+        >
+          <div style="margin-right: 16px">
+            <img
+              src="https://s3.328888.xyz/2022/08/17/hd7JE.png"
+              height="40px"
+            />
+            <p>新消息</p>
+          </div>
+          <div><p>1.0.0 版本 启用</p></div>
+        </div>
       </div>
+
       <!--自我介绍-->
       <jieshao
         class="flex Low_column"
@@ -319,7 +375,7 @@
         <div style="flex: 3; background-color: black; padding: 40px">
           <div>
             <p style="color: white; font-size: 40px">
-              1.0 版本<br />网页测试中
+              1.0 版本<br />灰度测试中
             </p>
           </div>
           <div class="flex">

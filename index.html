@@ -100,20 +100,21 @@
         style="flex: 1; align-items: center; justify-content: center"
         class="flex"
       >
-        <a href="" title="自己画的Logo"
-          ><img
+
+          <img
             src="./images/logo.png"
             height="50px"
             width="50px"
             class="Low_logo"
-        /></a>
+            alt="logo"
+        />
       </logoqu>
       <daohangqu
         style="flex: 3; justify-content: space-around; align-items: center"
         class="flex"
       >
         <div class="daohangkuang" style="display: flex">
-          <daohang class="daohang" title="首页（本页面）">HOME</daohang>
+          <daohang class="daohang" title="首页（本页面）" onclick="alert('已经在主页啦！')">HOME</daohang>
         </div>
         <div class="daohangkuang">
           <daohang
@@ -158,6 +159,8 @@
             alt="图片"
             style="max-height: 400px"
             class="low_height mg8"
+            height="400px"
+            width="400px"
           />
         </div>
         <div
@@ -227,30 +230,11 @@
               <img
                 src="https://s3.328888.xyz/2022/08/17/hde3w.png"
                 height="130px"
+                alt="图片"
               />
             </div>
           </div>
-          <div
-            style="
-              height: 300px;
-              width: 300px;
-              background-color: #424d46bc;
-              margin: 8px;
-              border-radius: 20px;
-              padding: 16px;
-              display: flex;
-              flex-direction: column;
-            "
-          >
-            <iframe
-              scrolling="no"
-              src="https://tianqiapi.com/api.php?style=ti&skin=cake"
-              frameborder="0"
-              width="250"
-              height="270"
-              allowtransparency="true"
-            ></iframe>
-          </div>
+        
         </div>
         <!--消息区-->
         <div
@@ -268,6 +252,7 @@
             <img
               src="https://s3.328888.xyz/2022/08/17/hd7JE.png"
               height="40px"
+              alt="图片"
             />
             <p>新消息</p>
           </div>
@@ -337,6 +322,7 @@
               title="分享网站"
               onclick="copyToClip('https://const808.github.io/','网站链接已经复制成功了，分享给别人吧！')"
               style="margin-right: 8px; margin-left: 8px"
+              alt="分享"
             />
             <img
               src="./images/Notion.png"
@@ -344,6 +330,7 @@
               title="进入我的notion笔记"
               onclick="window.open('https://zhihang.notion.site/','_blank');"
               style="margin-right: 8px; margin-left: 8px"
+              alt="notion"
             />
             <img
               src="./images/bilibili.png"
@@ -351,6 +338,7 @@
               title="进入我的bilibili主页"
               onclick="window.open('https://space.bilibili.com/187815824?spm_id_from=333.1007.0.0')"
               style="margin-left: 8px; margin-right: 8px"
+              alt="bilibili"
             />
           </div>
           <p style="font-size: small">IN DOING WE LEARN</p>
@@ -365,7 +353,6 @@
           <div class="flex">
             <div style="flex: 1">
               <p style="color: white">友情链接</p>
-              <p style="color: white">测试</p>
               <p style="color: white">测试</p>
               <p style="color: white">测试</p>
             </div>

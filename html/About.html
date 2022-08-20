@@ -46,6 +46,7 @@
       }
       a {
         color: white;
+        text-decoration: none;
       }
 
       @media (max-width: 600px) {
@@ -65,110 +66,110 @@
         }
       }
     </style>
-
   </head>
   <body style="display: flex; flex-direction: column">
-    <daohanglan
-      class="flex"
-      style="
+    <daohanglan class="flex" style="
         background-color: white;
         height: 100px;
         padding: 8px;
         margin-bottom: 16px;
-      "
-    >
-      <logoqu
-        style="flex: 1; align-items: center; justify-content: center"
-        class="flex"
-      >
-        <a href="" title="自己画的Logo"
-          ><img
-            src="../images/logo.png"
-            height="50px"
-            width="50px"
-            class="Low_logo"
-        /></a>
+      ">
+      <logoqu style="flex: 1; align-items: center; justify-content: center" class="flex">
+        <a href="" title="自己画的Logo"><img src="../images/logo.png" height="50px" width="50px" class="Low_logo"></a>
       </logoqu>
-      <daohangqu
-        style="flex: 3; justify-content: space-around; align-items: center"
-        class="flex"
-      >
+      <daohangqu style="flex: 3; justify-content: space-around; align-items: center" class="flex">
         <div class="daohangkuang" style="display: flex">
           <daohang class="daohang" title="首页（本页面）" onclick="window.location.href='../index.html'">HOME</daohang>
         </div>
         <div class="daohangkuang">
-          <daohang
-            title="点击跳转到介绍页面"
-            class="daohang"
-            onclick="alert('已经在该页面啦')"
-            >ABOUT</daohang
-          >
+          <daohang title="点击跳转到介绍页面" class="daohang" onclick="alert('已经在该页面啦')">ABOUT</daohang>
         </div>
         <div class="daohangkuang">
-          <daohang
-            class="daohang"
-            onclick="alert('页面正在建设中')"
-            title="我的时间博物馆"
-            >MUSEUM</daohang
-          >
+          <daohang class="daohang" onclick="alert('页面正在建设中')" title="我的时间博物馆">MUSEUM</daohang>
           <!--window.location.href-->
         </div>
       </daohangqu>
     </daohanglan>
-    <div style="height: 1000px; margin: 10px" class="flex column mg8">
-      <div
-        style="
-          height: 900px;
-          margin: 20px;
-          display: flex;
-          flex-direction: column;
-        "
-      >
-        <div style="display: flex; align-self: center">
-          <h1>小破站的记事表</h1>
-        </div>
-        <div
-          style="
-            margin: 30px;
-            line-height: 2;
-            align-self: center;
-            overflow: inherit;
-          "
-        >
-          <h2>0.5 版本</h2>
-          <div class="flex">
-            <p style="margin: 8px">2022/5/12</p>
-            <p style="margin: 8px">
-              上线github 并拥有自定义二级域名 const808.github.io
-            </p>
-          </div>
-          <div class="flex">
-            <p style="margin: 8px">2022/5/01</p>
-            <p style="margin: 8px">界面美化</p>
-          </div>
 
-          <h2>0.1 版本</h2>
+    <div class="flex column">
+      <!--头图-->
+      <div style="
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+">
+        <img style="width: 80%;height: 100%;" src="../images/bg.jpg" alt="背景图片">
+        
+      </div>
+      <div class="flex" style="width: 100%; justify-content: center">
+        <h1>小破站的记事表</h1>
+      </div>
+
+      <div class="mg8" style="align-self: center">
+        <div>
+          <h2>版本说明</h2>
+        </div>
+        <div class="flex column">
+          <div><h2>v 0.5</h2></div>
           <div class="flex">
-            <p style="margin: 8px">2022/4/12</p>
-            <p style="margin: 8px">初次上线于 腾讯云</p>
+            <p class="mg8">2022/5/12</p>
+            <p class="mg8">
+              静态网站上线github 并拥有自定义二级域名 const808.github.io
+            </p>
           </div>
           <div class="flex">
-            <p style="margin: 8px">2022/4/10</p>
-            <p style="margin: 8px">
-              开始学习网页的相关知识,并在本地敲下了第一个<br />“Hello world”
+            <p class="mg8">2022/5/01</p>
+            <p class="mg8">界面美化</p>
+          </div>
+        </div>
+        <div class="flex column">
+          <div><h2>v 0.1</h2></div>
+          <div class="flex">
+            <p class="mg8">2022/4/12</p>
+            <p class="mg8">静态网站初次上线于 腾讯云</p>
+          </div>
+          <div class="flex">
+            <p class="mg8">2022/4/10</p>
+            <p class="mg8">
+              开始学习web的相关知识,并在本地敲下了 “Hello world”
             </p>
           </div>
         </div>
-        <h1 style="align-self: center">版权声明</h1>
-        <div style="margin: 30px; align-self: center">
-          <p style="">
-            本站所涉及到的部分图片，音频，文本来源于网络，未找到出处的未进行标识。本站仅供个人学习使用，无任何商业行为，如果侵犯到您的权益，请联系电子邮箱
-            1526203375@qq.com 进行删除。
+      </div>
+      <!--版权声明-->
+      <div class="flex column mg8" style="align-items: center">
+        <div><h1>版权声明</h1></div>
+        <div style="height: 100px; max-width: 600px">
+          <p>
+            本站所涉及到的部分图片，音频，文本来源于网络，未找到出处的未进行标识。本站仅供个人学习使用，无任何商业行为，如果侵犯到您的权益，请联系电子邮箱:
+            <a href="mailto:1526203375@qq.com" style="color: rgb(21, 143, 196)">1526203375@qq.com</a>进行删除。
           </p>
         </div>
       </div>
+      <!--底部栏-->
+      <div class="flex Low_column" style="
+          background-color: rgb(17, 17, 17);
+          margin-top: 50px;
+          padding: 8px;
+        ">
+        <div class="mg8">
+          <div><p style="color: white">素材来源：</p></div>
+          <div>
+            <a href="https://bz.zzzmh.cn/index" target="_blank">极简壁纸</a>
+            <a href="https://wallhaven.cc/" target="_blank">wallhaven</a>
+          </div>
+        </div>
+        <div class="mg8">
+          <div><p style="color: white">网址导航:</p></div>
+          <div>
+            <a href="https://neocities.org/" target="_blank">neocities</a>
+            <a href="https://github.com/" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-   
-  </body>
+  
+
+</body>
 </html>

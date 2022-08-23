@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>陈志航的主页</title>
-    <link rel="shortcut  icon" href="./images/logo.png" type="image/x-icon" />
+    <link href="./images/logo.png" type="image/x-icon" />
     <meta name="description" content="个人网站" />
     <style>
       body {
@@ -40,6 +40,15 @@
         /*通过控制行高使文本居中*/
         line-height: 30px;
       }
+      .card {
+        height: 300px;
+        width: 300px;
+        margin: 8px;
+        border-radius: 20px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+      }
       daohang:hover {
         background-color: black;
         color: white;
@@ -48,6 +57,7 @@
         color: white;
         text-decoration: none;
       }
+
 
       @media (max-width: 600px) {
         .Low_neirong {
@@ -197,34 +207,34 @@
             justify-content: center;
           "
         >
-          <div
-            style="
-              height: 300px;
-              width: 300px;
-              background-color: #0d22aabd;
-              margin: 8px;
-              border-radius: 20px;
-              color: white;
-              padding: 16px;
-            "
-          >
+          <!--bootTab-->
+          <div class="card" style="background-color: #182caeaa; color: white">
             <p style="text-align: center"><b>boat Tab</b></p>
             <p>一个即将编写的起始页</p>
             <p>学习范本 https://www.midorg.com/tab.html</p>
             <a href="./html/boatTab.html">boatTab 预览一下</a>
           </div>
+          <!--网址导航-->
           <div
-            style="
-              height: 300px;
-              width: 300px;
-              background-color: #e1d126bc;
-              margin: 8px;
-              border-radius: 20px;
-              padding: 16px;
-              display: flex;
-              flex-direction: column;
-            "
+            class="card"
+            style="background-color: rgba(108, 180, 176, 0.712); color: white"
           >
+            <p style="text-align: center"><b>学习之路</b></p>
+            <div style="display: flex">
+              <a href="./html/wzdh.html" target="_blank"><img
+                style="border-radius: 20px; margin-right: 8px; cursor: pointer"
+                src="./images/link.png"
+                height="80px"
+                width="80px"
+                title="点击进去新网页"
+              /></a>
+
+              <p>网址导航<br /><span style="font-size: small">1条网址</span></p>
+
+            </div>
+          </div>
+          <!--施工中-->
+          <div class="card" style="background-color: #e1d126bc">
             <div>
               <p style="font-size: 40px">
                 <b>文明施工</b><br /><b>抓紧建设 !!!</b>
@@ -305,7 +315,12 @@
         <p style="font-size: 40px">Never, never, never, never give up.</p>
         <button
           id="mybutton"
-          style="height: 40px; width: 100px; border-radius: 20px;background-color: white;"
+          style="
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            background-color: white;
+          "
         >
           修改姓名
         </button>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../images/logo.png" rel="shortcut icon" />
+    <title>网址导航</title>
+    <link href="../styles/wzdh.css" rel="stylesheet" />
+    <link
+      href="https://fonts.font.im/css?family=Philosopher"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; height: 100vh">
+      <div
+        class="flex"
+        style="
+          height: 80px;
+          width: 100%;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          z-index: 1;
+        "
+      >
+        <div class="flex1 flex center">
+          <p
+            style="
+              font-family: 'Philosopher', sans-serif;
+              text-align: center;
+              font-size: 24px;
+            "
+          >
+            Web navigation
+          </p>
+        </div>
+        <div
+          class="flex3 flex"
+          style="
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 50px;
+          "
+        >
+          <a href="../index.html">
+            <img
+              src="../images/home_light.png"
+              height="50px"
+              width="50px"
+              alt="一个小房子形状的图标，代表回到主页"
+              style="margin: 8px"
+            />
+          </a>
+        </div>
+      </div>
+      <div style="flex: 1; overflow: auto">
+        <!--导航区-->
+        <div style="height: 800px; padding: 20px">
+          <p>网址导航</p>
+          <main class="flex" style="flex-wrap: wrap">
+            <!--导航块-->
+            <section
+              class="flex"
+              style="
+                height: 200px;
+                width: 350px;
+                border: 2px solid;
+                border-radius: 8px;
+                margin: 8px;
+                padding: 8px;
+              "
+            >
+              <!--左边-->
+              <div class="flex flex1 center">
+                <a href="https://developer.mozilla.org/zh-CN/">
+                  <img
+                    src="../images/wzdh/mdn.webp"
+                    height="80px"
+                    alt="mdn的logo,一个m"
+                  />
+                </a>
+              </div>
+              <!--右边-->
+              <div class="flex2">
+                <p style="margin-bottom: 0; font-size: larger"><b>MDN</b></p>
+                <a
+                  href="https://developer.mozilla.org/zh-CN/"
+                  class="second_p"
+                  title="点击进入MDN"
+                  >立即前往</a
+                >
+                <p>Web学习必备,内含Web三大件学习文档,通俗易懂。</p>
+              </div>
+            </section>
+            <!--导航块-->
+            <section
+              class="flex"
+              style="
+                height: 200px;
+                width: 350px;
+                border: 2px solid;
+                border-radius: 8px;
+                margin: 8px;
+                padding: 8px;
+              "
+            >
+              <!--左边-->
+              <div class="flex flex1 center">
+                <img
+                  src="../images/wzdh/fcc.jfif"
+                  alt="
+                freeCodeCamp的logo"
+                  height="80px"
+                />
+              </div>
+              <!--右边-->
+              <div class="flex2">
+                <p style="margin-bottom: 0"><b>freeCodeCamp</b></p>
+                <a
+                  href="https://developer.mozilla.org/zh-CN/"
+                  class="second_p"
+                  title="点击进入MDN"
+                  >立即前往</a
+                >
+                <p>
+                  免费学习编程的开发者社区，涵盖
+                  Python、HTML、CSS、React、Vue、BootStrap、JSON 教程等。
+                </p>
+              </div>
+            </section>
+          </main>
+        </div>
+        <!--底部栏-->
+        <div class="flex" style="height: 200px;align-items:flex-end;justify-content:center">
+          <div
+            style="
+              font-size: 20px;
+            "
+          >
+            <p style="font-family: 'Philosopher', sans-serif;margin: 36px;">
+              © 2022 Cons8
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -22,7 +22,7 @@
         height: 100vh;
       }
       /* * {
-  border: 1px solid black;
+border: 1px solid black;
 } */
       .flex {
         display: flex;
@@ -66,6 +66,9 @@
       a {
         color: white;
         text-decoration: none;
+      }
+      mycard:hover {
+        width: 400px;
       }
 
       @media (max-width: 600px) {
@@ -176,7 +179,7 @@
       >
         <div class="flex">
           <img
-            src="./images/画板-1.webp"
+            src="https://i.imgtg.com/2022/09/21/gNE1M.webp"
             alt="图片"
             style="max-height: 400px"
             class="low_height mg8"
@@ -204,6 +207,7 @@
           flex-wrap: wrap;
           width: 100%;
           justify-content: center;
+          margin: 40px;
         "
       >
         <div
@@ -216,16 +220,29 @@
           "
         >
           <!--bootTab-->
-          <div class="card" style="background-color: #182caeaa; color: white">
+          <mycard
+            class="card"
+            style="
+              background-color: #182caeaa;
+              color: white;
+              transition: width 0.5s;
+              margin: 20px;
+            "
+          >
             <p style="text-align: center"><b>boat Tab</b></p>
             <p>一个即将编写的起始页</p>
             <p>学习范本 https://www.midorg.com/tab.html</p>
             <a href="./html/boatTab.html">boatTab 预览一下</a>
-          </div>
+          </mycard>
           <!--网址导航-->
-          <div
+          <mycard
             class="card"
-            style="background-color: rgba(108, 180, 176, 0.712); color: white"
+            style="
+              background-color: rgba(108, 180, 176, 0.712);
+              color: white;
+              transition: width 0.5s;
+              margin: 20px;
+            "
           >
             <p style="text-align: center"><b>学习之路</b></p>
             <div style="display: flex">
@@ -244,9 +261,12 @@
 
               <p>网址导航<br /><span style="font-size: small">2条网址</span></p>
             </div>
-          </div>
+          </mycard>
           <!--施工中-->
-          <div class="card" style="background-color: #e1d126bc">
+          <mycard
+            class="card"
+            style="background-color: #e1d126bc; transition: width 0.5s;margin: 20px;"
+          >
             <div>
               <p style="font-size: 40px">
                 <b>文明施工</b><br /><b>抓紧建设 !!!</b>
@@ -261,32 +281,27 @@
                 alt="图片"
               />
             </div>
-          </div>
+          </mycard>
         </div>
-        <!--消息区-->
-        <div
-          style="
-            display: flex;
-            height: 80px;
-            width: 70%;
-            margin: 8px;
-            border-radius: 20px;
-            padding: 16px;
-            border: 3px solid black;
-          "
-        >
-          <div style="margin-right: 16px">
-            <img
-              src="./images/消息.png"
-              height="40px"
-              width="40px"
-              alt="图片"
-            />
-            <p>新消息</p>
-          </div>
-          <div>
-            <p>1.0.0 版本 启用<br />当前版本 v 1.0.2</p>
-          </div>
+      </div>
+      <!--消息区-->
+      <div
+        style="
+          display: flex;
+          height: 80px;
+          width: 70%;
+          margin: 8px;
+          border-radius: 20px;
+          padding: 16px;
+          border: 3px solid black;
+        "
+      >
+        <div style="margin-right: 16px">
+          <img src="./images/消息.png" height="40px" width="40px" alt="图片" />
+          <p>新消息</p>
+        </div>
+        <div>
+          <p>1.0.0 版本 启用<br />当前版本 v 1.0.2</p>
         </div>
       </div>
 
@@ -322,7 +337,7 @@
       </jieshao>
       <div style="height: 80vh; margin: 30">
         <p style="font-size: 70px">
-          Hey! <span id="myname" style="color: rgb(222, 70, 40)">bro.</span> 🥰
+          Hey! <span id="myname" style="color: rgb(222, 70, 40)">陈.</span> 🥰
         </p>
         <p style="font-size: 40px; font-family: play">
           <span style="color: rgb(222, 70, 40)">Never, </span>never, never,
@@ -345,7 +360,6 @@
       </div>
     </neirong>
 
-    
     <dibulan class="flex column" style="margin-top: 100px">
       <div class="flex Low_column" style="flex-wrap: wrap">
         <!--左区-->
@@ -452,6 +466,6 @@
         </div>
       </div>
     </dibulan>
-    <script src="./scripts/index_main.js" defer></script>
+    <script src="./scripts/index_main.js" defer=""></script>
   </body>
 </html>

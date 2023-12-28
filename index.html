@@ -8,7 +8,6 @@
     <style>
         body {
             margin: 0;
-            min-width: 600px;
         }
 
         .flex {
@@ -39,57 +38,66 @@
             color: white;
         }
 
-        .button-style-white {
-            border: 0;
-            border: 1px black solid;
-            background-color: white;
-            color: black;
-            min-height: 50px;
-            border-radius: 8px;
-            min-width: 150px;
-            font-size: larger;
-            cursor: pointer;
-        }
-
-        .button-style-black {
-            border: 0;
-            border: 1px white solid;
-            background-color: rgb(70, 70, 70);
-            color: white;
-            min-height: 50px;
-            border-radius: 8px;
-            min-width: 150px;
-            font-size: larger;
-            cursor: pointer;
-        }
 
         .color-grey {
             color: grey;
+        }
+
+        .button-style-white {
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 0, 0);
+            padding: 12px 20px;
+            border-radius: 7px;
+            transition: .3s;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        .button-style-white:hover {
+            border: 1px solid rgb(11, 195, 205);
+            background-color: transparent;
+            color: rgb(11, 195, 205);
+        }
+
+        .button-style-black {
+            background-color: rgb(0, 0, 0);
+            border: 1px solid rgb(255, 255, 255);
+            padding: 12px 20px;
+            border-radius: 7px;
+            transition: .3s;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .button-style-black:hover {
+            border: 1px solid rgb(11, 195, 205);
+            background-color: transparent;
+            color: rgb(11, 195, 205);
         }
     </style>
 </head>
 
 <body>
     <div
-        style="height: 100vh;width: 100%; background-color: black; background-image: url(./src/bg.webp);background-size: 100%;background-attachment: fixed;background-repeat: no-repeat;">
+        style="height: 100vh;width: 100%; background-color: black; background-image: url(./src/bg.webp);background-size: cover;background-attachment: fixed;background-repeat: no-repeat;">
         <div class="flex">
             <div style="flex: 2;height: 100vh;flex-direction: column;display: flex;">
                 <div class="flex1 flex flex-center padding-left-80">
                     <img src="./src/logo.webp" alt="" height="70px" style="border-radius: 20px;">
                 </div>
                 <div class="flex3 flex padding-left-80" style="flex-direction: column;">
-                    <h1 class="color-white">CONST</h1>
-                    <p class="color-white" style="font-family:serif;">要学会做科学的苦工。其次，要谦虚。第三要有热情。<span
-                            style="color: brown;font-size: larger;">"</span><br>巴甫洛夫</p>
+                    <h1 class="color-white">BOAT小星球</h1>
+                    <p class="color-white" style="font-family:serif;"><span
+                        style="color: brown;font-size: larger;">"<br></span>要学会做科学的苦工。其次，要谦虚。第三要有热情。<br>巴甫洛夫</p>
                     <div style="display: block;">
                         <button class="button-style-white">公众号</button>
                         <button class="button-style-black">博物馆</button>
                     </div>
-                    <p class="color-grey" style="font-family:serif;">当前暂只支持页面预览，无法进行交互<br>Latest 2023/12/28</p>
+                    <p class="color-grey" style="font-family:serif;">·当前页面仅支持预览，无法进行交互<br>·请使用电脑，平板，或者横屏查看此页面<br>·Latest 2023/12/28 Version 2.0.11</p>
                 </div>
             </div>
             <div class="flex flex1" style="height: 100vh;flex-direction: column;">
-                <div class="flex1 flex flex-center color-white" style="font-size: 50px;align-self: flex-end;padding-right: 80px;">
+                <div class="flex1 flex flex-center color-white"
+                    style="font-size: 50px;align-self: flex-end;padding-right: 80px;">
                     ◆◇◇
                 </div>
                 <div class="flex flex3"></div>

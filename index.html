@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陈志航的主页</title>
     <style>
-        .flex{
+        body {
+            margin: 0;
+            min-width: 600px;
+        }
+
+        .flex {
             display: flex;
         }
-        .flex-center{
+
+        .flex-center {
             align-items: center;
         }
-        .grey{
+
+        .grey {
             background-color: grey;
         }
-        .flex1{
+
+        .flex1 {
             flex: 1;
         }
-        .flex3{
+
+        .flex3 {
             flex: 3;
         }
-        .padding-left-80{
+
+        .padding-left-80 {
             padding-left: 80px;
         }
-        .color-white{
+
+        .color-white {
             color: white;
         }
-        .button-style-white{
+
+        .button-style-white {
             border: 0;
             border: 1px black solid;
             background-color: white;
@@ -35,8 +48,10 @@
             border-radius: 8px;
             min-width: 150px;
             font-size: larger;
+            cursor: pointer;
         }
-        .button-style-black{
+
+        .button-style-black {
             border: 0;
             border: 1px white solid;
             background-color: rgb(70, 70, 70);
@@ -45,27 +60,42 @@
             border-radius: 8px;
             min-width: 150px;
             font-size: larger;
+            cursor: pointer;
+        }
+
+        .color-grey {
+            color: grey;
         }
     </style>
 </head>
+
 <body>
-    <div style="height: 100vh;width: 100%; background-color: black; background-image: url(./src/bg.webp);background-size: 100%;background-attachment: fixed;background-repeat: no-repeat;">
+    <div
+        style="height: 100vh;width: 100%; background-color: black; background-image: url(./src/bg.webp);background-size: 100%;background-attachment: fixed;background-repeat: no-repeat;">
         <div class="flex">
             <div style="flex: 2;height: 100vh;flex-direction: column;display: flex;">
-                <div class="flex1 flex flex-center padding-left-80" >
-                        <img src="./src/logo.webp" alt="" height="70px" style="border-radius: 20px;">
+                <div class="flex1 flex flex-center padding-left-80">
+                    <img src="./src/logo.webp" alt="" height="70px" style="border-radius: 20px;">
                 </div>
-                <div class="flex3 flex padding-left-80" style="flex-direction: column;" >
+                <div class="flex3 flex padding-left-80" style="flex-direction: column;">
                     <h1 class="color-white">CONST</h1>
-                    <p class="color-white" style="font-family:serif;">要学会做科学的苦工。其次，要谦虚。第三要有热情。<span style="color: brown;font-size: larger;">"</span><br>巴甫洛夫</p>
+                    <p class="color-white" style="font-family:serif;">要学会做科学的苦工。其次，要谦虚。第三要有热情。<span
+                            style="color: brown;font-size: larger;">"</span><br>巴甫洛夫</p>
                     <div style="display: block;">
                         <button class="button-style-white">公众号</button>
                         <button class="button-style-black">博物馆</button>
                     </div>
+                    <p class="color-grey" style="font-family:serif;">当前暂只支持页面预览，无法进行交互<br>Latest 2023/12/28</p>
                 </div>
             </div>
-            <div style="flex: 1;height: 100vh;;"></div>
+            <div class="flex flex1" style="height: 100vh;flex-direction: column;">
+                <div class="flex1 flex flex-center color-white" style="font-size: 50px;align-self: flex-end;padding-right: 80px;">
+                    ◆◇◇
+                </div>
+                <div class="flex flex3"></div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>

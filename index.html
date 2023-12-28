@@ -75,6 +75,16 @@
             background-color: transparent;
             color: rgb(11, 195, 205);
         }
+
+        @media screen and (max-width: 600px) {
+            /* 这里的样式规则将只应用于屏幕宽度小于等于600px的设备 */
+            .cell-display-none{
+                display: none;
+            }
+            .cell-pading-2{
+                padding: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -83,10 +93,10 @@
         style="height: 100vh;width: 100%; background-color: black; background-image: url(./src/bg.webp);background-size: cover;background-repeat: no-repeat;">
         <div class="flex">
             <div style="flex: 2;height: 100vh;flex-direction: column;display: flex;">
-                <div class="flex1 flex flex-center padding-left-4">
+                <div class="flex1 flex flex-center padding-left-4 cell-pading-2">
                     <img src="./src/logo.webp" alt="" height="70px" style="border-radius: 1rem;">
                 </div>
-                <div class="flex3 flex padding-left-4" style="flex-direction: column;">
+                <div class="flex3 flex padding-left-4 cell-pading-2" style="flex-direction: column;">
                     <h1 class="color-white">BOAT小星球</h1>
                     <p class="color-white" style="font-family:serif;"><span
                             style="color: brown;font-size: xx-large;font-weight: bolder;">“<br></span>要学会做科学的苦工。其次，要谦虚。第三要有热情。<br>巴甫洛夫
@@ -95,11 +105,15 @@
                         <button class="button-style-white">公众号</button>
                         <button class="button-style-black">博物馆</button>
                     </div>
-                    <p class="color-grey" style="font-family:serif;">·当前页面仅支持预览，无法进行交互<br>·请使用电脑，平板，或者横屏查看此页面<br>·Latest
-                        2023/12/28 Version 2.0.11</p>
+                    <ul class="color-grey" style="font-family:serif;">
+                        <li>当前页面仅支持预览，无法进行交互</li>
+                        <li>使用电脑，平板，或者横屏查看此页面可获得最佳效果</li>
+                        <li>Latest 2023/12/28 Version 2.0.11</li>
+                    </ul>
+
                 </div>
             </div>
-            <div class="flex flex1" style="height: 100vh;flex-direction: column;">
+            <div class="flex flex1 cell-display-none" style="height: 100vh;flex-direction: column;">
                 <div class="flex1 flex flex-center color-white"
                     style="font-size: 3rem;align-self: flex-end;padding-right: 4rem;cursor: pointer;">
                     ◆◇◇

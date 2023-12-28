@@ -1,493 +1,71 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陈志航的主页</title>
-    <link rel="shortcut icon" href="./images/logo.png" />
-    <meta name="description" content="这个是陈志航的个人网站" />
-    <meta name="keywords" content="陈志航,陈志航的网站,陈志航的主页,cons8" />
-    <meta name="msvalidate.01" content="A572ACFFCAD037CBA75681AC693B74F0" />
-    <link
-      href="https://fonts.googlefonts.cn/css?family=Anton"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googlefonts.cn/css?family=Play"
-      rel="stylesheet"
-    />
     <style>
-      body {
-        margin: 0;
-        height: 100vh;
-      }
-      /* * {
-border: 1px solid black;
-} */
-      .flex {
-        display: flex;
-      }
-      .column {
-        flex-direction: column;
-      }
-      .mg8 {
-        margin: 8px;
-      }
-      .daohangkuang {
-        height: 80px;
-        width: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .daohang {
-        font-family: "Anton", sans-serif;
-        font-size: larger;
-        height: 40px;
-        width: 100%;
-        cursor: pointer;
-        text-align: center;
-        /*通过控制行高使文本居中*/
-        line-height: 30px;
-      }
-      .card {
-        height: 300px;
-        width: 300px;
-        margin: 8px;
-        border-radius: 20px;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-      }
-      daohang:hover {
-        background-color: black;
-        color: white;
-      }
-      a {
-        color: white;
-        text-decoration: none;
-      }
-      mycard:hover {
-        width: 400px;
-      }
-
-      @media (max-width: 600px) {
-        .Low_height {
-          height: 90%;
-          width: 90%;
-        }
-        .Low_logo {
-          height: 40px;
-          width: 40px;
-        }
-        .Low_column {
-          flex-direction: column;
-        }
-      }
-    </style>
-    <script>
-      /**
-       * 复制单行内容到粘贴板
-       * content : 需要复制的内容
-       * message : 复制完后的提示，不传则默认提示"复制成功"
-       */
-      function copyToClip(content, message) {
-        var aux = document.createElement("input");
-        aux.setAttribute("value", content);
-        document.body.appendChild(aux);
-        aux.select();
-        document.execCommand("copy");
-        document.body.removeChild(aux);
-        if (message == null) {
-          alert("复制成功");
-        } else {
-          alert(message);
-        }
-      }
-    </script>
-  </head>
-  <body style="display: flex; flex-direction: column">
-    <daohanglan
-      class="flex"
-      style="
-        background-color: white;
-        height: 100px;
-        padding: 8px;
-        margin-bottom: 16px;
-        border-bottom: 1px solid #eee;
-      "
-    >
-      <logoqu
-        style="flex: 1; align-items: center; justify-content: center"
-        class="flex"
-      >
-        <img
-          src="./images/logo.png"
-          height="50px"
-          width="50px"
-          class="Low_logo"
-          alt="logo"
-        />
-      </logoqu>
-      <daohangqu
-        style="flex: 3; justify-content: space-around; align-items: center"
-        class="flex"
-      >
-        <div class="daohangkuang" style="display: flex">
-          <daohang
-            class="daohang"
-            title="首页（本页面）"
-            onclick="alert('已经在主页啦！')"
-            style="transition: color 1s, background-color 0.5s"
-            >HOME</daohang
-          >
-        </div>
-        <div class="daohangkuang">
-          <daohang
-            title="点击跳转到介绍页面"
-            class="daohang"
-            onclick="window.document.location='./html/About.html'"
-            style="transition: color 1s, background-color 0.5s"
-            >ABOUT</daohang
-          >
-        </div>
-        <div class="daohangkuang">
-          <daohang
-            class="daohang"
-            onclick="location='https://zxczh.github.io'"
-            title="进入博客"
-            style="transition: color 1s, background-color 0.5s"
-            >BLOG</daohang
-          >
-          <!--window.loction.href-->
-        </div>
-      </daohangqu>
-    </daohanglan>
-    <neirong
-      style="
-        display: flex;
-        justify-content: center;
-        z-index: 1;
-        flex-wrap: wrap;
-      "
-    >
-      <!--首页展示-->
-      <div
-        style="
-          width: 100%;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 50px;
-        "
-        class="flex Low_column"
-      >
-        <div class="flex">
-          <img
-            src="https://i.imgtg.com/2022/09/21/gNE1M.webp"
-            alt="图片"
-            style="max-height: 400px"
-            class="low_height mg8"
-            height="400px"
-            width="400px"
-          />
-        </div>
-        <div
-          class="flex mg8"
-          style="flex-direction: column; align-items: center"
-        >
-          <p style="font-size: 50px; font-family: 'Play', sans-serif">
-            HELLO WORLD
-          </p>
-          <p style="font-family: 仿宋; font-size: 20px">
-            “要学会做科学的苦工。其次，要谦虚。第三要有热情。——巴甫洛夫”
-          </p>
-        </div>
-      </div>
-
-      <!--卡片-->
-      <div
-        style="
-          display: flex;
-          flex-wrap: wrap;
-          width: 100%;
-          justify-content: center;
-          margin: 40px;
-        "
-      >
-        <div
-          style="
+        .flex{
             display: flex;
-            flex-wrap: wrap;
+        }
+        .flex-center{
             align-items: center;
-            width: 100%;
-            justify-content: center;
-          "
-        >
-          <!--bootTab-->
-          <mycard
-            class="card"
-            style="
-              background-color: #182caeaa;
-              color: white;
-              transition: width 0.5s;
-              margin: 20px;
-            "
-          >
-            <p style="text-align: center"><b>boat Tab</b></p>
-            <p>一个即将编写的起始页</p>
-            <p>学习范本 https://www.midorg.com/tab.html</p>
-            <a href="./html/boatTab.html">boatTab 预览一下</a>
-          </mycard>
-          <!--网址导航-->
-          <mycard
-            class="card"
-            style="
-              background-color: rgba(108, 180, 176, 0.712);
-              color: white;
-              transition: width 0.5s;
-              margin: 20px;
-            "
-          >
-            <p style="text-align: center"><b>学习之路</b></p>
-            <div style="display: flex;margin: 8px;">
-              <a href="./html/wzdh.html" target="_blank"
-                ><img
-                  style="
-                    border-radius: 20px;
-                    margin-right: 8px;
-                    cursor: pointer;
-                  "
-                  src="./images/link.png"
-                  height="80px"
-                  width="80px"
-                  title="点击进去新网页"
-              /></a>
-              <p>网址导航<br /><span style="font-size: small">2条网址</span></p>
-            </div>
-            <div style="display: flex; margin: 8px;">
-              <a href="./html/dsj.html" target="_blank"
-                ><img
-                  style="
-                    border-radius: 20px;
-                    margin-right: 8px;
-                    cursor: pointer;
-                  "
-                  src="./images/link.png"
-                  height="80px"
-                  width="80px"
-                  title="点击进去新网页"
-              /></a>
-              <p>大数据<br /><span style="font-size: small">大数据学习之路</span></p>
-            </div>
-          </mycard>
-          <!--施工中-->
-          <mycard
-            class="card"
-            style="
-              background-color: #e1d126bc;
-              transition: width 0.5s;
-              margin: 20px;
-            "
-          >
-            <div>
-              <p style="font-size: 40px">
-                <b>文明施工</b><br /><b>抓紧建设 !!!</b>
-              </p>
-            </div>
-
-            <div style="align-self: end">
-              <img
-                src="./images/施工.png"
-                height="100px"
-                width="120px"
-                alt="图片"
-              />
-            </div>
-          </mycard>
-        </div>
-      </div>
-      <!--消息区-->
-      <div
-        style="
-          display: flex;
-          height: 80px;
-          width: 70%;
-          margin: 8px;
-          border-radius: 20px;
-          padding: 16px;
-          border: 3px solid black;
-        "
-      >
-        <div style="margin-right: 16px">
-          <img src="./images/消息.png" height="40px" width="40px" alt="图片" />
-          <p>新消息</p>
-        </div>
-        <div>
-          <p>大数据学习之路编写中</p>
-        </div>
-      </div>
-
-      <!--自我介绍-->
-      <jieshao
-        class="flex Low_column"
-        style="
-          margin: 30px;
-          width: 100%;
-          height: 300px;
-          background-color: rgb(0, 0, 0);
-          border-radius: 20px;
-          padding: 50px;
-        "
-      >
-        <!--左区-->
-        <div style="flex: 1">
-          <p style="color: white; font-size: 30px">About me</p>
-          <p class="text" style="color: white">暂时还没有更多介绍</p>
-        </div>
-        <!--中区-->
-        <div></div>
-
-        <!--右区-->
-        <div class="flex" style="justify-content: end">
-          <img
-            src="./images/星球.png"
-            height="100px"
-            width="100px"
-            alt="一张星球的图片"
-          />
-        </div>
-      </jieshao>
-      <div style="height: 80vh; margin: 30">
-        <p style="font-size: 70px">
-          Hey! <span id="myname" style="color: rgb(222, 70, 40)">bro.</span> 🥰
-        </p>
-        <p style="font-size: 40px; font-family: play">
-          <span style="color: rgb(222, 70, 40)">Never, </span>never, never,
-          never give up.
-        </p>
-        <button
-          id="mybutton"
-          style="
-            height: 50px;
-            width: 120px;
-            border-radius: 15px;
-            background-color: white;
-            border: 3px solid black;
-            cursor: pointer;
-          "
-          type="button"
-        >
-          修改姓名
-        </button>
-      </div>
-    </neirong>
-
-    <dibulan class="flex column" style="margin-top: 100px">
-      <div class="flex Low_column" style="flex-wrap: wrap">
-        <!--左区-->
-        <div
-          class="flex column"
-          style="
+        }
+        .grey{
+            background-color: grey;
+        }
+        .flex1{
             flex: 1;
+        }
+        .flex3{
+            flex: 3;
+        }
+        .padding-left-80{
+            padding-left: 80px;
+        }
+        .color-white{
+            color: white;
+        }
+        .button-style-white{
+            border: 0;
+            border: 1px black solid;
             background-color: white;
-            align-items: center;
-            margin: 30px;
-            justify-content: center;
-          "
-        >
-          <div>
-            <img
-              src="./images/logo.png"
-              height="50px"
-              width="50px"
-              alt="logo的图片"
-            />
-          </div>
-          <p
-            style="
-              font-family: 'Anton', sans-serif;
-              font-size: 30px;
-              margin-top: 0;
-            "
-          >
-            ZH'PAGE
-          </p>
-
-          <p style="font-size: small; color: rgb(64, 57, 57); margin-top: 0">
-            2022/4/10-2023/3/17
-          </p>
-          <p>CHENZHIHANG</p>
-          <p>开放 平等 协作 分享</p>
-
-          <div style="cursor: pointer; display: flex">
-            <img
-              src="./images/share.png"
-              height="35px"
-              width="35px"
-              title="分享网站"
-              onclick="copyToClip('https://cons8.github.io/','网站链接已经复制成功了，分享给别人吧！')"
-              style="margin-right: 8px; margin-left: 8px"
-              alt="分享"
-            />
-            <img
-              src="./images/Notion.png"
-              height="35px"
-              width="35px"
-              title="进入我的notion笔记"
-              onclick="window.open('https://zhihang.notion.site/');"
-              style="margin-right: 8px; margin-left: 8px"
-              alt="notion"
-            />
-            <img
-              src="./images/bilibili.png"
-              height="35px"
-              width="35px"
-              title="进入我的bilibili主页"
-              onclick="window.open('https://space.bilibili.com/187815824?spm_id_from=333.1007.0.0')"
-              style="margin-left: 8px; margin-right: 8px"
-              alt="bilibili"
-            />
-          </div>
-          <p style="font-size: small">IN DOING WE LEARN</p>
-        </div>
-        <!--右区-->
-        <div
-          style="flex: 3; background-color: black; padding: 40px 40px 0 40px"
-        >
-          <div>
-            <p style="color: white; font-size: 40px">
-              1.0 版本<br />
-            </p>
-          </div>
-          <div class="flex">
-            <div style="flex: 1">
-              <p style="color: white">友情链接</p>
-              <a class="mg8" href="https://cons8.github.io/cml/"
-                >陈明利的主页</a
-              >
+            color: black;
+            min-height: 50px;
+            border-radius: 8px;
+            min-width: 150px;
+            font-size: larger;
+        }
+        .button-style-black{
+            border: 0;
+            border: 1px white solid;
+            background-color: rgb(70, 70, 70);
+            color: white;
+            min-height: 50px;
+            border-radius: 8px;
+            min-width: 150px;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 100vh;width: 100%; background-color: black; background-image: url(./src/bg.webp);background-size: 100%;background-attachment: fixed;background-repeat: no-repeat;">
+        <div class="flex">
+            <div style="flex: 2;height: 100vh;flex-direction: column;display: flex;">
+                <div class="flex1 flex flex-center padding-left-80" >
+                        <img src="./src/logo.webp" alt="" height="70px" style="border-radius: 20px;">
+                </div>
+                <div class="flex3 flex padding-left-80" style="flex-direction: column;" >
+                    <h1 class="color-white">CONST</h1>
+                    <p class="color-white" style="font-family:serif;">要学会做科学的苦工。其次，要谦虚。第三要有热情。<span style="color: brown;font-size: larger;">"</span><br>巴甫洛夫</p>
+                    <div style="display: block;">
+                        <button class="button-style-white">公众号</button>
+                        <button class="button-style-black">博物馆</button>
+                    </div>
+                </div>
             </div>
-            <div class="flex" style="flex: 1; flex-direction: column">
-              <p style="color: white">其它</p>
-              <a class="mg8" href="http://www.nlc.cn/">中国国家图书馆</a>
-              <a class="mg8" href="https://www.midorg.com/">元岛</a>
-              <a class="mg8" href="http://googlefonts.cn/">google fonts</a>
-              <a class="mg8" href="./html/test.html">测试网页</a>
-            </div>
-          </div>
-          <hr />
-          <div
-            style="
-              flex: 1;
-              display: flex;
-              justify-content: end;
-              align-items: flex-end;
-            "
-          >
-            <p style="color: white">© 2022-2023 Cons8</p>
-          </div>
+            <div style="flex: 1;height: 100vh;;"></div>
         </div>
-      </div>
-    </dibulan>
-    <script src="./scripts/index_main.js" defer=""></script>
-  </body>
+    </div>
+</body>
 </html>

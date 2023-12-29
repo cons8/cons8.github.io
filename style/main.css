@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "douyinFont";
+    src: url("../src/DouyinSansBold.otf");
+}
+
+.clock {
+    font-family: "douyinFont";
+    font-size:4rem;
+    color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+/* 下方为按钮样式 */
+.button-style-white {
+    background-color: #eee;
+    border: 1px solid #121212;
+    padding: 12px 20px;
+    border-radius: 7px;
+    transition: .3s;
+    color: #000000;
+    cursor: pointer;
+}
+
+.button-style-white:hover {
+    border: 1px solid rgb(11, 195, 205);
+    background-color: transparent;
+    color: rgb(11, 195, 205);
+}
+
+.button-style-black {
+    background-color: #121212;
+    border: 1px solid #ffffff;
+    padding: 12px 20px;
+    border-radius: 7px;
+    transition: .3s;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.button-style-black:hover {
+    border: 1px solid rgb(11, 195, 205);
+    background-color: transparent;
+    color: rgb(11, 195, 205);
+}
+
+.button-style-red {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 12px 20px;
+    border-radius: 7px;
+    transition: .3s;
+    color: #ff0101;
+    cursor: pointer;
+}
+
+.button-style-red:hover {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}

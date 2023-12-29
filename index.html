@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陈志航的主页</title>
     <link rel="icon" href="./src/logoBlack.webp" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
     <style>
         body {
             margin: 0;
@@ -17,6 +18,10 @@
 
         .flex-center {
             align-items: center;
+        }
+
+        .flex-direction {
+            flex-direction: column;
         }
 
         .grey {
@@ -44,68 +49,49 @@
             color: grey;
         }
 
-        .button-style-white {
-            background-color: rgb(255, 255, 255);
-            border: 1px solid rgb(0, 0, 0);
-            padding: 12px 20px;
-            border-radius: 7px;
-            transition: .3s;
-            color: #000000;
-            cursor: pointer;
+        canvas {
+            border: 1px solid #121212;
+            border-radius: 20px;
         }
 
-        .button-style-white:hover {
-            border: 1px solid rgb(11, 195, 205);
-            background-color: transparent;
-            color: rgb(11, 195, 205);
-        }
+ 
 
-        .button-style-black {
-            background-color: rgb(0, 0, 0);
-            border: 1px solid rgb(255, 255, 255);
-            padding: 12px 20px;
-            border-radius: 7px;
-            transition: .3s;
-            color: #ffffff;
-            cursor: pointer;
-        }
-
-        .button-style-black:hover {
-            border: 1px solid rgb(11, 195, 205);
-            background-color: transparent;
-            color: rgb(11, 195, 205);
-        }
 
         @media screen and (max-width: 600px) {
+
             /* 这里的样式规则将只应用于屏幕宽度小于等于600px的设备 */
-            .cell-display-none{
+            .cell-display-none {
                 display: none;
             }
-            .cell-pading-2{
+
+            .cell-pading-2 {
                 padding: 2rem;
             }
         }
     </style>
+
+
 </head>
 
 <body>
-    <div
-        style="height: 100vh;width: 100%; background-color: black; background-image: url(./src/bg.webp);background-size: cover;background-repeat: no-repeat;overflow-y: auto;">
+    <!-- 第一页 -->
+    <div class="shake"
+        style="height: 100vh;width: 100%; background-color: #121212; background-image: url(./src/bg.webp);background-size: cover;background-repeat: no-repeat;overflow-y: auto;">
         <div class="flex">
             <div style="flex: 2;height: 100vh;flex-direction: column;display: flex;">
                 <div class="flex1 flex flex-center padding-left-4 cell-pading-2">
                     <img src="./src/logo.webp" alt="" height="70px" style="border-radius: 1rem;">
                 </div>
                 <div class="flex3 flex padding-left-4 cell-pading-2" style="flex-direction: column;">
-                    <h1 class="color-white">BOAT小星球</h1>
-                    <p class="color-white" style="font-family:serif;"><span
+                    <h1 class="color-white" style="font-family: douyinFont;">BOAT小星球</h1>
+                    <p class="color-white" style="font-family:douyinFont;"><span
                             style="color: brown;font-size: xx-large;font-weight: bolder;">“<br></span>要学会做科学的苦工。其次，要谦虚。第三要有热情。<br>巴甫洛夫
                     </p>
                     <div style="display: block;">
-                        <button class="button-style-white">公众号</button>
-                        <button class="button-style-black">博物馆</button>
+                        <button id="gongzhonghao" class="button-style-white">公众号</button>
+                        <button id="bowuguan" class="button-style-black">博物馆</button>
                     </div>
-                    <ul class="color-grey" style="font-family:serif;">
+                    <ul class="color-grey">
                         <li>当前页面仅支持预览，无法进行交互</li>
                         <li>使用电脑，平板，或者横屏查看此页面可获得最佳效果</li>
                         <li>Latest 2023/12/28 Version 2.0.11</li>
@@ -122,6 +108,36 @@
             </div>
         </div>
     </div>
+    <!-- 第二页 番茄 -->
+    <div class="flex flex-direction" style="background-color: #121212;padding: 1rem;">
+        
+        <div class="flex">
+            <div class="card" style="background-color: #3e6992;width: 500px;">
+                <div>
+                    <h3 style="margin: 0;color: white;">天气</h3>
+                </div>
+            </div>
+            <div class="card" style="background-color: #b63b3b;">
+                <div>
+                    <h3 style="margin: 0;color: white;">番茄时钟</h3>
+                </div>
+                
+                <h1 class="clock">25:00</h1>
+                <div>
+                    <button class="button-style-red">→</button>
+                    <button class="button-style-red">↻</button>
+                </div>
+                <p style="font-size: small;color: #eee;">专注是一件正经事</p>
+            </div>
+
+        </div>
+
+       
+    </div>
+    <div style="background-color: #121212;color: #666666;text-align: center;padding: 1rem;padding-top: 5rem;">
+        下面还在探索中
+    </div>
+    <script src="./script/main.js"></script>
 </body>
 
 </html>

@@ -2,11 +2,11 @@ console.log("js加载成功")
 window.onload = function () {
   var gongzhonghao = document.getElementById("gongzhonghao")
   gongzhonghao.onclick = function () {
-    alert("微信公众号：Boat小星球")
+    showPopup("微信公众号请搜索：Boat小星球")
   }
   var bowuguan = document.getElementById("bowuguan")
   bowuguan.onclick = function () {
-    alert("正在搭建...")
+    showPopup("正在搭建...")
   }
 
 
@@ -22,4 +22,15 @@ window.onload = function () {
     hitokotoFrom.innerText=data.from
   })
   .catch(console.error)
+}
+// 弹窗
+function showPopup(p){
+  var overlay = document.getElementById("overlay");
+  const popup_content = document.querySelector('#popup_content')
+  popup_content.innerText = p
+  overlay.style.display = "block";
+}
+function hidePopup(){
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "none";
 }

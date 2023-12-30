@@ -54,7 +54,7 @@
             border-radius: 20px;
         }
 
- 
+
 
 
         @media screen and (max-width: 600px) {
@@ -108,31 +108,38 @@
             </div>
         </div>
     </div>
-    <!-- 第二页 番茄 -->
-    <div class="flex flex-direction" style="background-color: #121212;padding: 1rem;">
-        
+    <!-- 第二页 组件 -->
+    <div class="flex flex-direction" style="background-color: #121212;padding: 1rem;flex-wrap: wrap;">
         <div class="flex">
-            <div class="card" style="background-color: #3e6992;width: 500px;">
-                <div>
-                    <h3 style="margin: 0;color: white;">天气</h3>
+            <div class="card"
+                style="width: 500px;background-image: url(https://api.isoyu.com/bing_images.php); background-color: #373285;">
+                <h3 style="margin: 0;color: white;">一言</h3>
+                <div class="flex flex-center flex-direction">
+                    <p id="hitokoto">
+                    <p href="#" id="hitokoto_text" style="color: white;font-size: large;">:D 获取中...</p>
+                    <p id="hitokoto_from" style="color: white;">——</p>
+                    </p>
                 </div>
             </div>
             <div class="card" style="background-color: #b63b3b;">
                 <div>
                     <h3 style="margin: 0;color: white;">番茄时钟</h3>
                 </div>
-                
-                <h1 class="clock">25:00</h1>
-                <div>
+
+                <h1 class="clock" style="text-align: center;">25:00</h1>
+                <div style="margin: auto;">
                     <button class="button-style-red">→</button>
                     <button class="button-style-red">↻</button>
                 </div>
-                <p style="font-size: small;color: #eee;">专注是一件正经事</p>
+                <p style="font-size: small;color: #eee;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;专注是一件正经事</p>
             </div>
 
         </div>
 
-       
+
     </div>
     <div style="background-color: #121212;color: #666666;text-align: center;padding: 1rem;padding-top: 5rem;">
         下面还在探索中

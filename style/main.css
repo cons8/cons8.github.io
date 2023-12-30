@@ -111,7 +111,8 @@
 }
 
 .fadelogIn{
-    animation: fadelogIn 1s;
+    animation: fadelogIn 1.5s;
+    
 }
 @keyframes fadelogIn {
     0% {

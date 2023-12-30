@@ -16,6 +16,7 @@
     margin: 1rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    background-color: #eee;
 }
 
 /* 下方为按钮样式 */
@@ -128,6 +129,14 @@
     }
 }
 
+@keyframes hideDiv{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 /* 弹出框的标题 */
 .popup_title {
     height: 60px;
@@ -165,3 +174,10 @@
     color: #ffffff;
     background-color: #044d8d;
 }
+/* 文字显示不清 */
+.fontBg{
+    background-color: #12121252;
+    border-radius: 1rem;
+}
+
+/* 任务清单 */

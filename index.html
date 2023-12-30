@@ -83,15 +83,15 @@
                     <img src="./src/logo.webp" alt="" height="70px" style="border-radius: 1rem;">
                 </div>
                 <div class="flex3 flex padding-left-4 cell-pading-2" style="flex-direction: column;">
-                    <h1 class="color-white" style="font-family: douyinFont;">BOAT小星球</h1>
-                    <p class="color-white" style="font-family:douyinFont;"><span
+                    <h1 class="color-white  fadelogIn" style="font-family: douyinFont;">BOAT小星球</h1>
+                    <p class="color-white fadelogIn" style="font-family:douyinFont;"><span
                             style="color: brown;font-size: xx-large;font-weight: bolder;">“<br></span>要学会做科学的苦工。其次，要谦虚。第三要有热情。<br>巴甫洛夫
                     </p>
-                    <div style="display: block;">
+                    <div class="fadelogIn" style="display: block;">
                         <button id="gongzhonghao" class="button-style-white">公众号</button>
                         <button id="bowuguan" class="button-style-black">博物馆</button>
                     </div>
-                    <ul class="color-grey">
+                    <ul class="color-grey fadelogIn">
                         <li>当前页面仅支持预览，无法进行交互</li>
                         <li>使用电脑，平板，或者横屏查看此页面可获得最佳效果</li>
                         <li>Latest 2023/12/28 Version 2.0.11</li>
@@ -111,8 +111,9 @@
     <!-- 第二页 组件 -->
     <div class="flex flex-direction" style="background-color: #121212;padding: 1rem;flex-wrap: wrap;">
         <div class="flex">
+
             <div class="card"
-                style="width: 500px;background-image: url(https://api.isoyu.com/bing_images.php); background-color: #373285;">
+                style="width: 500px;background-image: url(https://api.isoyu.com/bing_images.php); background-color: #373285;backdrop-filter: blur(10px);">
                 <h3 style="margin: 0;color: white;">一言</h3>
                 <div class="flex flex-center flex-direction">
                     <p id="hitokoto">
@@ -121,6 +122,8 @@
                     </p>
                 </div>
             </div>
+
+            <!-- 番茄时钟 -->
             <div class="card" style="background-color: #b63b3b;">
                 <div>
                     <h3 style="margin: 0;color: white;">番茄时钟</h3>
@@ -144,6 +147,18 @@
     <div style="background-color: #121212;color: #666666;text-align: center;padding: 1rem;padding-top: 5rem;">
         下面还在探索中
     </div>
+    <!-- 弹窗组件 -->
+    <div id="overlay">
+        <div class="popup">
+            <p class="popup_title">提示</p>
+            <p id="popup_content" class="popup_content">弹出框</p>
+            <div class="popup_btn">
+                <button class="cancelBtn" onclick="hidePopup()">取消</button>
+                <button class="confirmBtn" onclick="hidePopup()">确认</button>
+            </div>
+        </div>
+    </div>
+
     <script src="./script/main.js"></script>
 </body>
 

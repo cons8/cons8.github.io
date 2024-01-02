@@ -17,6 +17,10 @@
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     background-color: #eee;
+    transition: .5s;
+}
+.card:hover{
+    transform: translate(0,-5%);
 }
 
 /* 下方为按钮样式 */

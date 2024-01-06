@@ -67,6 +67,9 @@
             .cell-pading-2 {
                 padding: 2rem;
             }
+            .cell-display-none{
+                display: none;
+            }
         }
     </style>
 
@@ -76,7 +79,7 @@
 <body>
     <!-- 第一页 -->
     <div class="shake"
-        style="height: 100vh;width: 100%; background-color: #121212; background-image: url(./src/bg.webp);background-size: cover;background-repeat: no-repeat;overflow-y: auto;">
+        style="height: 100vh;width: 100%; background-color: #121212; background-image: url(./src/bg.webp);background-size: cover;background-repeat: no-repeat;overflow-y: auto;background-position-x:15% ;">
         <div class="flex">
             <div style="flex: 2;height: 100vh;flex-direction: column;display: flex;">
                 <div class="flex1 flex flex-center padding-left-4 cell-pading-2">
@@ -111,7 +114,7 @@
     </div>
 
     <!-- 第二页 组件 -->
-    <div class="flex flex-direction" style="background-color: #121212;padding: 1rem;flex-wrap: wrap;">
+    <div class="flex flex-direction" style="background-color: #121212;padding: 1rem;">
         <div class="flex">
             <!-- 一言 -->
             <div class="card container" style="width: 500px;background-image: url('https://api.isoyu.com/bing_images.php');
@@ -128,7 +131,7 @@
             </div>
 
             <!-- 番茄时钟 -->
-            <div class="card flex1" style="background-color: #ac3a3a;">
+            <div class="card flex1 cell-display-none" style="background-color: #ac3a3a;">
                 <div>
                     <h3 style="margin: 0;color: white;">番茄时钟</h3>
                 </div>
@@ -142,7 +145,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;专注是一件正经事</p>
             </div>
-            <div class="flex flex1 card"
+            <div class="flex flex1 card cell-display-none"
                 style="background-color: #7f6ac5;background-image: url(./src/001.webp);background-size: cover;">
                 <div>
                     <h3 style="margin: 0;color: rgb(255, 255, 255);">名片</h3>
@@ -155,9 +158,9 @@
     </div>
         <!-- 显示 -->
         <div style="padding: 2rem;background-color: #121212;">
-            <div class="scrolling-box flex flex-direction flex-center" style="background-color: #a0373780;padding: 1rem 0;margin: auto;align-items: center;width: 40%;">
-                <div style="color: #c43535;font-size: small;">A ROMANTIC JOURNEY THROUGH THE STARS: A SCI-FI NOVEL</div>
-                <div style="border-bottom: 1px #b73d3d solid;width: 100%;margin: 1rem 0;"></div>
+            <div class="scrolling-box flex flex-direction flex-center" style="background-color: #a0373780;padding: 1rem 0;margin: auto;align-items: center;min-width: 40%;max-width: 20rem;">
+                <div style="color: #c43535;font-size: smaller;">A ROMANTIC JOURNEY THROUGH THE STARS: A SCI-FI NOVEL</div>
+                <div style="border-bottom: 1px #c43535 solid;width: 100%;margin: 1rem 0;"></div>
                 <div class="scrolling-text" style="color: #c43535;font-size: larger;font-weight: bolder;margin: 1rem 0;font-family: douyinFont;">HELLO UNIVERSE HELLO UNIVERSE HELLO UNIVERSE </div>
             </div>
         </div>

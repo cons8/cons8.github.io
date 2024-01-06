@@ -19,8 +19,9 @@
     background-color: #eee;
     transition: .5s;
 }
-.card:hover{
-    transform: translate(0,-5%);
+
+.card:hover {
+    transform: translate(0, -5%);
 }
 
 /* 下方为按钮样式 */
@@ -115,32 +116,37 @@
     }
 }
 
-.fadelogIn{
+.fadelogIn {
     animation: fadelogIn 1.5s;
-    
+
 }
+
 @keyframes fadelogIn {
     0% {
         opacity: 0;
         transform: translate3d(0, 100%, 0);
     }
+
     50% {
         transform: translate3d(0, -10%, 0);
     }
+
     100% {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 }
 
-@keyframes hideDiv{
-    0%{
+@keyframes hideDiv {
+    0% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
+
 /* 弹出框的标题 */
 .popup_title {
     height: 60px;
@@ -178,10 +184,36 @@
     color: #ffffff;
     background-color: #044d8d;
 }
+
 /* 文字显示不清 */
-.fontBg{
+.fontBg {
     background-color: #12121252;
     border-radius: 1rem;
 }
 
-/* 任务清单 */
+/* 文字 */
+.scrolling-box {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: 3s wordsLoop linear infinite normal;
+}
+@keyframes wordsLoop {
+    0% {
+        color: #c43535;
+    }
+
+    20% {
+        color: #ea5454;
+    }
+    40% {
+        color: #d57474;
+    }
+    100% {
+        color: #ec1414;
+    }
+}

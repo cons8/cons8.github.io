@@ -1,199 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陈志航的主页</title>
-    <link rel="icon" href="./src/logoBlack.webp" sizes="16x16">
-    <link rel="stylesheet" type="text/css" href="./style/main.css">
-    <style>
-        body {
-            margin: 0;
-        }
-        .flex {
-            display: flex;
-        }
-
-        .flex-center {
-            align-items: center;
-        }
-
-        .flex-direction {
-            flex-direction: column;
-        }
-
-        .grey {
-            background-color: grey;
-        }
-
-        .flex1 {
-            flex: 1;
-        }
-
-        .flex3 {
-            flex: 3;
-        }
-
-        .padding-left-4 {
-            padding-left: 4rem;
-        }
-
-        .color-white {
-            color: white;
-        }
-
-
-        .color-grey {
-            color: grey;
-        }
-
-        canvas {
-            border: 1px solid #121212;
-            border-radius: 20px;
-        }
-
-
-
-
-        @media screen and (max-width: 600px) {
-
-            /* 这里的样式规则将只应用于屏幕宽度小于等于600px的设备 */
-            .cell-display-none {
-                display: none;
-            }
-
-            .cell-pading-2 {
-                padding: 2rem;
-            }
-
-            .cell-display-none {
-                display: none;
-            }
-        }
-    </style>
-
-
+    <title>ConstWeb</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-    <!-- 第一页 -->
-    <div class="shake"
-        style="height: 100vh;width: 100%; background-color: #121212; background-image: url(./src/bg.webp);background-size: cover;background-repeat: no-repeat;overflow-y: auto;background-position-x:15% ;">
-        <div class="flex">
-            <div style="flex: 2;height: 100vh;flex-direction: column;display: flex;">
-                <div class="flex1 flex flex-center padding-left-4 cell-pading-2">
-                    <img src="./src/logo.webp" alt="" height="70px" style="border-radius: 1rem;">
-                </div>
-                <div class="flex3 flex padding-left-4 cell-pading-2" style="flex-direction: column;">
-                    <h1 class="color-white  fadelogIn" style="font-family: douyinFont;">BOAT小星球</h1>
-                    <p class="color-white fadelogIn" style="font-family:douyinFont;"><span
-                            style="color: brown;font-size: xx-large;font-weight: bolder;">“<br></span>要学会做科学的苦工。其次，要谦虚。第三要有热情。<br>巴甫洛夫
-                    </p>
-                    <div class="fadelogIn" style="display: block;">
-                        <button id="gongzhonghao" class="button-style-white">公众号</button>
-                        <button id="bowuguan" class="button-style-black">博物馆</button>
-                    </div>
-                    <ul class="color-grey fadelogIn">
-                        <li>当前页面仅支持预览，无法进行交互</li>
-                        <li>推荐使用谷歌浏览器内核。电脑，平板，或者横屏查看此页面可获得最佳效果</li>
-                        <li><a style="text-decoration: none; color: grey;" href="./html/About.html">Latest 2023/12/28
-                                Version 3.0.11</a></li>
-                    </ul>
+    <div>
 
-                </div>
-            </div>
-            <div class="flex flex1 cell-display-none" style="height: 100vh;flex-direction: column;">
-                <div class="flex1 flex flex-center color-white"
-                    style="font-size: 3rem;align-self: flex-end;padding-right: 4rem;cursor: pointer;">
-                    ◆◇◇
-                </div>
-                <div class="flex flex3"></div>
-            </div>
-        </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand mx-5" href="#">
+            <img src="./src/logo.webp" width="30" height="30" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">链接</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-    <!-- 第二页 组件 -->
-    <div class="flex flex-direction" style="background-color: #121212;padding: 2rem;">
-        <div class="flex">
-            <!-- 一言 -->
-            <div class="card container" style="width: 500px;background-image: url('https://api.isoyu.com/bing_images.php');
-                background-color: #373285;;background-size:cover;padding: 0;">
-                <div class="fontBg flex flex1 card" style="margin: 0;">
-                    <h3 style="margin: 0;color: white;">一言</h3>
-                    <div class="flex flex-center flex-direction">
-                        <p id="hitokoto">
-                        <p href="#" id="hitokoto_text" style="color: white;font-size: large;">:D 获取中...</p>
-                        <p id="hitokoto_from" style="color: white;">——</p>
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="jumbotron d-flex align-items-center justify-content-center flex-column bg-spring">
+        <h2 class="display-4 text-light">春风化雨</h2>
+        <p class="text-light">CONST 为今天</p>
+      </div>
 
-            <!-- 番茄时钟 -->
-            <div class="card flex1 cell-display-none" style="background-color: #ac3a3a;">
-                <div>
-                    <h3 style="margin: 0;color: white;">番茄时钟</h3>
-                </div>
-                <h1 class="clock" style="text-align: center;">25:00</h1>
-                <div style="margin: auto;">
-                    <button class="button-style-red">→</button>
-                    <button class="button-style-red">↻</button>
-                </div>
-                <p style="font-size: small;color: #eee;">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;专注是一件正经事</p>
-            </div>
-            <div class="flex flex1 card cell-display-none"
-                style="background-color: #7f6ac5;background-image: url(./src/001.webp);background-size: cover;">
-                <div>
-                    <h3 style="margin: 0;color: rgb(255, 255, 255);">名片</h3>
-                </div>
-                <div>
-                    <h1 style="font-family: douyinFont;">CONST</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 显示 -->
-    <div class="flex" style="padding: 2rem;background-color: #121212;flex-wrap: wrap;justify-content: center;">
-        <div class="scrolling-box flex flex-direction"
-            style="background-color: #a0373780;padding: 1rem 0;align-items: center;min-width: 40%;max-width: 20rem;position: relative;">
-            <div style="color: #db3434;font-size: xx-small;">A ROMANTIC JOURNEY THROUGH THE STARS: A SCI-FI NOVEL
-            </div>
-            <div style="border-bottom: 1px #c43535 solid;width: 100%;margin: 1rem 0;"></div>
-            <div class="scrolling-text"
-                style="color: #c43535;font-size: larger;font-weight: bolder;margin: 1rem 0;font-family: douyinFont;">
-                HELLO UNIVERSE HELLO UNIVERSE HELLO UNIVERSE</div>
-            <div style="position: absolute;bottom: 1rem;; color: #db3434ae; font-size: x-small;">CONST</div>
-        </div>
-        <div
-            style="width: 50%;color: rgba(255, 255, 255, 0.607);font-size: x-small;padding: 1rem;line-height: 1.5rem;letter-spacing: 2px;">
-            在遥远的宇宙中，有一个神秘的星球，我们称之为“BOAT”。<br>
-            这个星球并非自然形成，而是由一群高度先进的文明所创造。<br>
-            星球的表面是由无尽的海洋构成，深邃而广阔，其水面上漂浮着数百个巨大的船体。<br>
-            这些船体是星球居民的家园，他们称之为“浮动城市”。<br>
-            在星球的边缘，有一片被称为“深渊之地”的区域。这是一个禁区，据说隐藏着强大的秘密和未知的力量。<br>
-            只有勇敢的探险家才会踏足此地，而他们中的大多数都一去不复返。
-        </div>
-    </div>
-    <div style="background-color: #121212;color: #666666;text-align: center;padding: 1rem;padding-top: 5rem;">
-        下面还在探索中
-    </div>
-    <!-- 弹窗组件 -->
-    <div id="overlay" style="display: none;">
-        <div class="popup">
-            <p class="popup_title">提示</p>
-            <p id="popup_content" class="popup_content">弹出框</p>
-            <div class="popup_btn">
-                <button class="cancelBtn" onclick="hidePopup()">取消</button>
-                <button class="confirmBtn" onclick="hidePopup()">确认</button>
-            </div>
-        </div>
-    </div>
 
-    <script src="./script/main.js"></script>
-</body>
-
+       <!-- 底部栏 -->
+    <footer class="py-4">
+        <p class="text-center">&copy; 2024 const All rights reserved.</p>
+    </footer>
+      <script src="./js/jquery.js"></script>
+      <script src="./js/bootstrap.js"></script>
+  </body>
 </html>

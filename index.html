@@ -8,51 +8,52 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
-   <link rel="shortcut icon" href="./src/logo.webp" type="image/x-icon"></link>
+  <link rel="shortcut icon" href="./src/logo.webp" type="image/x-icon">
+  </link>
 </head>
 
 <body>
-  <!-- 导航栏 -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <img src="./src/logo.webp" class="img-fluid rounded-circle" alt="ConstWeb Logo" width="50px"></img>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">主页</a>
-            <span class="sr-only">(current)</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./htmls/filllight.html">补光灯</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <img src="./src/img1.jpg" alt="" srcset="" width="100%">
-        <h1 class="display-4">春风化雨</h1>
+  <div id="app">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <img src="./src/logo.webp" class="img-fluid rounded-circle" alt="ConstWeb Logo" width="50px"></img>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item" :class="{active:item.sronly}" v-for="item in navs">
+              <a class="nav-link" :href="item.url">{{item.name}}</a>
+              <span v-if="item.sronly" class="sr-only">(current)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <!-- 设置背景图片 -->
+      <div class="container text-light p-4" style="background-image: url('./src/img1.jpg');background-size: cover;">
+        <h1 class="display-4 mt-5">春风化雨</h1>
         <p class="lead">ConstWeb is a personal website for const.</p>
-        <button class="btn btn-primary" id="test_btn">点我一下试试</button>
+        <button class="btn btn-primary mt-4" @click="test">点我一下试试</button>
+      </div>
+      <!-- vue -->
+      <div class="p-4 mt-4" v-for="item in works" :key="item.name" style="background-color: #f6f098;">
+        <h3 class="card-title">{{item.name}}</h3>
+        <p class="card-text">{{item.desc}}</p>
       </div>
     </div>
   </div>
-
-
   <!-- 底部栏 -->
   <footer class="py-4 text-center">
     <p class="text-muted">&copy; 2024 const All rights reserved.</p>
   </footer>
   <script src="./js/jquery.js"></script>
   <script src="./js/bootstrap.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>

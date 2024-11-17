@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
   <div id="app">
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,17 +32,28 @@
         </div>
       </div>
     </nav>
-    <div class="container mt-5">
+    <div class="container">
       <!-- 设置背景图片 -->
-      <div class="container text-light p-4" style="background-image: url('./src/img1.jpg');background-size: cover;">
-        <h1 class="display-4 mt-5">春风化雨</h1>
-        <p class="lead">ConstWeb is a personal website for const.</p>
-        <button class="btn btn-primary mt-4" @click="test">点我一下试试</button>
+      <div class="container p-4 mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="mt-5">春风化雨</h1>
+            <p class="lead">ConstWeb is a personal website for const.</p>
+            <button class="btn btn-primary mt-4" @click="test">点我一下试试</button>
+          </div>
+          <div class="col-md-6 rounded" style="background-image: url('./src/img1.jpg');background-size: cover;" >
+          </div>
+        </div>
       </div>
-      <!-- vue -->
-      <div class="p-4 mt-4" v-for="item in works" :key="item.name" style="background-color: #f6f098;">
-        <h3 class="card-title">{{item.name}}</h3>
-        <p class="card-text">{{item.desc}}</p>
+    </div>
+  </div>
+  <div id="links" class="container border p-5 mt-5">
+    <h3>Links</h3>
+    <div class="row">
+      <div class="col-md-4" v-for="(linkArray, colIndex) in links" :key="colIndex">
+        <div class="mt-2" v-for="(item, itemIndex) in linkArray" :key="itemIndex">
+          <a :href="item.href" target="_blank">{{item.name}}</a>
+        </div>
       </div>
     </div>
   </div>
@@ -54,6 +64,7 @@
   <script src="./js/jquery.js"></script>
   <script src="./js/bootstrap.js"></script>
   <script src="./js/index.js" type="module"></script>
+  <script src="./js/links.js" type="module"></script>
 </body>
 
 </html>

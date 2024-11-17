@@ -16,29 +16,26 @@
 </head>
 
 <body>
-  <!-- 导航栏 -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <img src="../src/logo.webp" class="img-fluid rounded-circle" alt="ConstWeb Logo" width="50px"></img>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">主页</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/contact.html">补光灯</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/htmls/links.html">链接</a>
-          </li>
-        </ul>
+  <div id="app">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <img src="/src/logo.webp" class="img-fluid rounded-circle" alt="ConstWeb Logo" width="50px"></img>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item" :class="{active:item.sronly}" v-for="item in navs">
+              <a class="nav-link" :href="item.url">{{item.name}}</a>
+              <span v-if="item.sronly" class="sr-only">(current)</span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
   <div id="light" class="text-center p-5">
     <p>选择颜色</p>
     <input type="color" id="colorPicker">
@@ -50,7 +47,7 @@
   </footer>
   <script src="../js/jquery.js"></script>
   <script src="../js/bootstrap.js"></script>
-  <script src="../js/filllight.js"></script>
+  <script src="../js/light.js" type="module"></script>
 </body>
 
 </html>

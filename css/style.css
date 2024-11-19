@@ -1,5 +1,12 @@
-.bg-spring{
+.hero-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-image: url('../src/img1.jpg');
     background-size: cover;
     background-position: center;
+    color: white;
+    letter-spacing:3exl;
 }

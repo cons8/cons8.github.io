@@ -13,6 +13,7 @@ const linksDev = [
 const linksIdea = [
   { name: 'awwwards', href: 'https://www.awwwards.com/'},
   { name: 'GitHub', href: 'https://github.com/'},
+  { name: 'heroku', href: 'https://www.heroku.com/'},
 ]
 const linksMyweb = [
   { name: 'ConstWeb', href: 'https://cons8.github.io/' },

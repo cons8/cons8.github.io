@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConstWeb</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        #colorPicker {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <img src="/src/logo.webp" class="img-fluid rounded-circle" alt="ConstWeb Logo" width="50px"></img>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item" :class="{active:item.sronly}" v-for="item in navs">
+                            <a class="nav-link" :href="item.url">{{item.name}}</a>
+                            <span v-if="item.sronly" class="sr-only">(current)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container p-5">
+        <h1>关于我</h1>
+        <p>
+            1.编程语言<br>
+            Java：掌握了Java基础，能够进行面向对象编程，编写高效、可维护的代码，了解常用的库和框架（如Spring Boot）。<br>
+            C语言：具备一定的C语言基础，能够编写基本的程序，理解指针、内存管理、结构体等底层编程概念。<br>
+            <br>
+            2. 后端开发<br>
+            Spring Boot：熟悉Spring Boot框架，能够快速构建和部署Web应用，理解Spring框架的依赖注入、AOP、事务管理等核心概念。<br>
+            RESTful API开发：能够设计和实现RESTful风格的API，熟悉HTTP协议、请求/响应机制以及状态码等。<br>
+            数据库：有一定的SQL基础，能够与数据库进行交互，掌握基本的数据库操作（增删改查）和数据库设计原则。<br>
+            <br>
+            3. 数据结构与算法<br>
+            数据结构：理解并能够实现常见的数据结构，如链表、栈、队列、树、图、哈希表等。<br>
+            算法：具备基础的算法知识，能够理解和实现排序、查找、递归等常见算法，了解算法的时间和空间复杂度。<br>
+            <br>
+            4. 版本控制<br>
+            Git：能够使用Git进行版本控制，熟悉常用的Git命令（如git clone、git commit、git merge等），能够进行分支管理。<br>
+            <br>
+            5. 开发工具<br>
+            IDE：熟悉使用IDE（如IntelliJ IDEA、Visual Studio Code）进行代码编写、调试和管理项目。<br>
+            Maven/Gradle：能够使用Maven或Gradle管理Java项目的依赖、构建和发布过程。<br>
+            <br>
+            6. 系统设计与架构<br>
+            微服务架构：对微服务架构有一定的理解，能够设计和实现分布式应用系统。<br>
+            设计模式：掌握常用的设计模式，如单例模式、工厂模式、观察者模式等，能够在项目中应用。<br>
+            <br>
+            7. 学习与实践能力<br>
+            具备扎实的基础，通过分阶段学习和小项目驱动，能快速提升技术水平。<br>
+            具备一定的解决问题和优化代码的能力，能够将理论与实践结合，提升项目质量和效率。<br>
+        </p>
+    </div>
+
+    <!-- 底部栏 -->
+    <footer class="py-4 text-center">
+        <p class="text-muted">&copy; 2024 const All rights reserved.</p>
+    </footer>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script type="module" src="../js/about.js"></script>
+</body>
+
+</html>

@@ -3,6 +3,7 @@ import { getnav } from '/js/nav.js';
 
 const navs = getnav("首页")
 
+const book01 = document.querySelector("#books").children[0]
 
 createApp({
     data(){
@@ -13,7 +14,6 @@ createApp({
     methods : {
         test(){
             alert("试试就试试");
-    
         }
     }
 }).mount("#app")

@@ -4,59 +4,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Const</title>
 </head>
 
 <body>
-  <div class="page">
-    <!-- 顶部导航 -->
-    <header class="header">
-      <div class="logo">Const</div>
-      <nav class="nav">
-        <span class="nav-item">首页</span>
-        <span class="nav-item">关于</span>
-      </nav>
-    </header>
+  <!-- 背景网格 -->
+  <div class="bg-grid"></div>
 
-    <!-- 幻灯片容器 -->
-    <div class="slides-container">
-      <!-- 第1页 -->
-      <section class="slide" id="slide-0">
-        <div class="content">
-          <h1 class="title">
-            <span class="title-line">在理性与感性的</span>
-            <span class="title-line">边界，寻找那束</span>
-            <span class="title-line">恰到好处的光。</span>
-          </h1>
+  <!-- 导航 -->
+  <header class="nav-header">
+    <div class="logo">Const</div>
+    <nav class="nav-links">
+      <span class="nav-link">Index</span>
+      <span class="nav-link">About</span>
+    </nav>
+  </header>
 
-          <p class="desc">在信息洪流中保持独立思考。</p>
-        </div>
-        <div class="right">
-          <img src="./src/img1.jpg" alt="">
-        </div>
-      </section>
+  <!-- 侧边装饰线 -->
+  <div class="side-line">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-      <!-- 第2页 -->
-      <section class="slide" id="slide-1">
-        <div class="content">
-          <div id="works-list" class="works"></div>
-        </div>
-        <div class="right">
-          <img src="./src/04_flower.png" alt="">
-        </div>
-      </section>
+  <!-- 页码 -->
+  <div class="slide-number" id="slide-number">01 / 03</div>
+
+  <!-- 滚动指示点 -->
+  <div class="scroll-dots">
+    <span class="scroll-dot active" data-index="0"></span>
+    <span class="scroll-dot" data-index="1"></span>
+    <span class="scroll-dot" data-index="2"></span>
+  </div>
+
+  <!-- Hero -->
+  <section class="section hero">
+    <span class="section-num">01 / 03</span>
+    <h1 class="hero-title">
+      <span class="line">在理性与感性的</span>
+      <span class="line">边界，寻找那束</span>
+      <span class="line">恰到好处的光。</span>
+    </h1>
+    <p class="hero-sub">Finding the perfect light at the intersection of reason and emotion.</p>
+    <div class="scroll-hint">Scroll to explore</div>
+  </section>
+
+  <!-- 关于 -->
+  <section class="section about">
+    <span class="section-num">02 / 03</span>
+    <p class="about-label">About</p>
+    <p class="about-text">
+      折腾者与探索者。<br>
+      关注<strong>交互体验</strong>、<strong>视觉语言</strong>与<strong>产品思维</strong>。
+    </p>
+  </section>
+
+  <!-- 作品 -->
+  <section class="section works">
+    <span class="section-num">03 / 03</span>
+    <div class="works-header">
+      <span class="works-title">Selected Works</span>
+      <span class="works-count">3 Projects</span>
     </div>
-  </div>
-
-  <!-- 装饰数字 -->
-  <div class="number" id="slide-number">01</div>
-
-  <!-- 滚动指示器 -->
-  <div class="scroll-indicator">
-    <span class="dot active" data-slide="0"></span>
-    <span class="dot" data-slide="1"></span>
-  </div>
+    <div class="works-list" id="works-list"></div>
+  </section>
 
   <script src="./js/data.js"></script>
   <script src="./js/main.js"></script>

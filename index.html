@@ -16,8 +16,8 @@
   <header class="nav-header">
     <div class="logo">Const</div>
     <nav class="nav-links">
-      <span class="nav-link">Index</span>
-      <span class="nav-link">About</span>
+      <span class="nav-link" data-page="0">Index</span>
+      <span class="nav-link" data-page="3">About</span>
     </nav>
   </header>
 
@@ -29,18 +29,19 @@
   </div>
 
   <!-- 页码 -->
-  <div class="slide-number" id="slide-number">01 / 03</div>
+  <div class="slide-number" id="slide-number">01 / 04</div>
 
   <!-- 滚动指示点 -->
   <div class="scroll-dots">
     <span class="scroll-dot active" data-index="0"></span>
     <span class="scroll-dot" data-index="1"></span>
     <span class="scroll-dot" data-index="2"></span>
+    <span class="scroll-dot" data-index="3"></span>
   </div>
 
   <!-- Hero -->
   <section class="section hero">
-    <span class="section-num">01 / 03</span>
+    <span class="section-num">01 / 04</span>
     <h1 class="hero-title">
       <span class="line">在理性与感性的</span>
       <span class="line">边界，寻找那束</span>
@@ -52,7 +53,7 @@
 
   <!-- 关于 -->
   <section class="section about">
-    <span class="section-num">02 / 03</span>
+    <span class="section-num">02 / 04</span>
     <p class="about-label">About</p>
     <p class="about-text">
       折腾者与探索者。<br>
@@ -62,13 +63,58 @@
 
   <!-- 作品 -->
   <section class="section works">
-    <span class="section-num">03 / 03</span>
+    <span class="section-num">03 / 04</span>
     <div class="works-header">
       <span class="works-title">Selected Works</span>
-      <span class="works-count">3 Projects</span>
+      <span class="works-count" id="works-count">3 Projects</span>
     </div>
     <div class="works-list" id="works-list"></div>
   </section>
+
+
+  <!-- 学习资源 -->
+  <section class="section resources">
+    <span class="section-num">04 / 04</span>
+    <div class="terminal-wrapper">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-buttons">
+            <span class="btn-close"></span>
+            <span class="btn-min"></span>
+            <span class="btn-max"></span>
+          </div>
+          <span class="terminal-title">tech@stack:~</span>
+        </div>
+        <div class="terminal-body" id="terminal-output">
+          <div class="line">
+            <span class="line-info">Welcome to Tech Stack v1.0</span>
+          </div>
+          <div class="line">
+            <span class="line-hint">Type <span class="cmd">help</span> to see available commands</span>
+          </div>
+          <div class="line empty"></div>
+        </div>
+        <div class="terminal-shortcuts">
+          <button class="shortcut-btn" data-cmd="help">help</button>
+          <button class="shortcut-btn" data-cmd="list">list</button>
+          <button class="shortcut-btn" data-cmd="fe">fe</button>
+          <button class="shortcut-btn" data-cmd="be">be</button>
+          <button class="shortcut-btn" data-cmd="about">about</button>
+          <button class="shortcut-btn" data-cmd="tools">tools</button>
+          <button class="shortcut-btn" data-cmd="clear">clear</button>
+        </div>
+        <div class="terminal-input">
+          <span class="prompt">tech@stack:~$</span>
+          <div class="input-wrapper">
+            <span class="input-hint" id="input-hint"></span>
+            <input type="text" id="terminal-input" autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/shell.js"></script>
 
   <script src="./js/data.js"></script>
   <script src="./js/main.js"></script>

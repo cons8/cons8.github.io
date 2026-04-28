@@ -18,9 +18,10 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
   height: 100%;
+  scroll-padding-top: 0px;
 }
 
 body {
@@ -29,7 +30,8 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-height: 100%;
+  height: 100%;
+  overscroll-behavior: none;
 }
 
 /* 环境光晕 */
@@ -507,6 +509,408 @@ body::before {
   display: block;
 }
 
+/* ==================== Skills 区块 ==================== */
+.skills-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.skills-title {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+.skills-count {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-mono);
+  letter-spacing: 2px;
+}
+
+.skills-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0 -60px;
+  padding: 0 60px 24px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  direction: ltr;
+}
+
+.skills-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.skills-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.skills-wrapper::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+
+.skills-list {
+  display: flex;
+  gap: 2px;
+}
+
+.skill-card {
+  flex: 0 0 280px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.skill-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(232, 200, 122, 0.4);
+  transform: translateY(-4px);
+}
+
+.skill-card:hover .skill-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.skill-card:hover .skill-num {
+  color: var(--accent);
+}
+
+.skill-card:hover .skill-title {
+  color: #fff;
+}
+
+.skill-card:hover .skill-tag {
+  opacity: 0.7;
+}
+
+.skill-inner {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.skill-num {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  font-family: var(--font-mono);
+  letter-spacing: 3px;
+  transition: color 0.3s ease;
+}
+
+.skill-title {
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.3s ease;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.skill-tag {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 2px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.skill-arrow {
+  font-size: 16px;
+  color: var(--accent);
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: all 0.3s ease;
+  padding: 24px;
+}
+
+/* ==================== Resources 区块 ==================== */
+.resources-header {
+  display: none;
+}
+
+.resources-title {
+  display: none;
+}
+
+.terminal-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.terminal {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: #161b22;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-buttons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.btn-close { background: #ff5f57; }
+.btn-min { background: #febc2e; }
+.btn-max { background: #28c840; }
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 20px 24px;
+  overflow-y: auto;
+  line-height: 1.8;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+.line {
+  margin-bottom: 8px;
+}
+
+.line.empty {
+  margin-bottom: 16px;
+}
+
+.line-info {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+}
+
+.line-hint {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+}
+
+.cmd {
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+.line-result {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+}
+
+.section-head {
+  color: #7ee787;
+  display: block;
+  margin: 16px 0 8px;
+}
+
+.item-row {
+  display: flex;
+  gap: 16px;
+  padding: 3px 0;
+}
+
+.item-gap {
+  height: 12px;
+}
+
+.item-row.sub {
+  padding-left: 20px;
+}
+
+.item-bullet {
+  color: #7ee787;
+}
+
+.item-name {
+  color: rgba(255, 255, 255, 0.9);
+  min-width: 140px;
+}
+
+.item-desc {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+}
+
+.item-hint {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+
+.cmd-result {
+  color: #7ee787;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+.code-block {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.item-link {
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+.item-link:hover {
+  text-decoration: underline;
+}
+
+.line-error {
+  color: #f85149;
+  font-size: 13px;
+}
+
+.line-input {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.echo-prompt {
+  color: #7ee787;
+}
+
+.terminal-shortcuts {
+  display: flex;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #161b22;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.shortcut-btn {
+  padding: 4px 10px;
+  background: rgba(126, 231, 135, 0.08);
+  border: 1px solid rgba(126, 231, 135, 0.2);
+  border-radius: 3px;
+  color: rgba(126, 231, 135, 0.7);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.shortcut-btn:hover {
+  background: rgba(126, 231, 135, 0.15);
+  color: #7ee787;
+  border-color: rgba(126, 231, 135, 0.4);
+}
+
+.shortcut-btn:active {
+  transform: scale(0.95);
+  background: rgba(126, 231, 135, 0.25);
+}
+
+.terminal-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0d1117;
+}
+
+.prompt {
+  color: #7ee787;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.input-hint {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  white-space: pre;
+}
+
+.terminal-input input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.4;
+  caret-color: #7ee787;
+}
+
 /* ==================== 响应式 ==================== */
 @media (max-width: 900px) {
   .nav-header {
@@ -566,6 +970,25 @@ body::before {
   .side-line {
     display: none;
   }
+
+  .skills-wrapper {
+    margin: 0 -32px;
+    padding: 0 32px 24px;
+  }
+
+  .skill-card {
+    flex: 0 0 240px;
+  }
+
+  .skills-header {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .terminal-body {
+    padding: 16px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -577,12 +1000,33 @@ body::before {
     padding: 0 24px;
   }
 
+  .hero {
+    padding-top: 100px;
+  }
+
   .hero-title {
+    font-size: clamp(40px, 12vw, 64px);
     letter-spacing: -2px;
+    margin-bottom: 32px;
+  }
+
+  .hero-title .line:nth-child(2) {
+    padding-left: 20px;
+  }
+
+  .hero-title .line:nth-child(3) {
+    padding-left: 10px;
+  }
+
+  .hero-sub {
+    font-size: 13px;
+    padding-left: 16px;
+    margin-left: 0;
   }
 
   .scroll-hint {
     left: 24px;
+    bottom: 28px;
   }
 
   .slide-number {

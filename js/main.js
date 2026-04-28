@@ -106,6 +106,25 @@ document.addEventListener('DOMContentLoaded', () => {
       goToSection(index);
     });
   });
+
+  // 导航链接事件
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const page = parseInt(link.dataset.page);
+      goToSection(page);
+
+      // 如果是 About（第四页），发送 about 命令
+      if (page === 3) {
+        setTimeout(() => {
+          const input = document.getElementById('terminal-input');
+          if (input) {
+            input.value = 'about';
+            input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+          }
+        }, 600);
+      }
+    });
+  });
 });
 
 window.addEventListener('scroll', handleScroll, { passive: true });

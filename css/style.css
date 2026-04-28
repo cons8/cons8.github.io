@@ -347,6 +347,25 @@ body::before {
   overflow: hidden;
 }
 
+.work-card::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(232, 200, 122, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(calc(var(--mouse-x, 0) - 50%), calc(var(--mouse-y, 0) - 50%));
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.work-card.hovering::before {
+  opacity: 1;
+}
+
 .work-card:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(232, 200, 122, 0.2);
@@ -375,10 +394,10 @@ body::before {
 }
 
 .card-inner {
-  padding: 32px 28px 28px;
+  padding: 20px 18px 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   flex: 1;
 }
 
@@ -391,7 +410,7 @@ body::before {
 }
 
 .card-title {
-  font-size: clamp(18px, 2vw, 26px);
+  font-size: clamp(14px, 1.5vw, 18px);
   font-weight: 700;
   color: var(--text-muted);
   transition: color 0.3s ease;
@@ -411,9 +430,9 @@ body::before {
 
 .card-arrow {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  font-size: 16px;
+  top: 16px;
+  right: 16px;
+  font-size: 14px;
   color: var(--accent);
   opacity: 0;
   transform: translate(-4px, 4px);
@@ -421,7 +440,7 @@ body::before {
 }
 
 .card-img-placeholder {
-  height: 140px;
+  height: 80px;
   background: linear-gradient(135deg, rgba(232, 200, 122, 0.08) 0%, rgba(232, 200, 122, 0.02) 100%);
   opacity: 0.08;
   transition: opacity 0.4s ease;
@@ -431,7 +450,7 @@ body::before {
 }
 
 .card-img-placeholder span {
-  font-size: 40px;
+  font-size: 24px;
   opacity: 0.3;
 }
 

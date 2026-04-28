@@ -15,7 +15,7 @@ function initShell() {
     '<span class="cmd">tools</span>     - Show developer tools',
     '<span class="cmd">json</span>      - Format/validate JSON',
     '<span class="cmd">clear</span>     - Clear terminal'
-  ].join('\n');
+  ].join('<br>');
 
   const commands = {
     help,
@@ -344,7 +344,7 @@ function initShell() {
     });
   });
 
-  input.focus();
+  input.focus({ preventScroll: true });
 }
 
 function formatTech(type = 'all') {

@@ -107,6 +107,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 卡片鼠标跟随光效
+  const worksList = document.getElementById('works-list');
+  if (worksList) {
+    worksList.addEventListener('mousemove', (e) => {
+      const card = e.target.closest('.work-card');
+      if (card) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+      }
+    });
+
+    worksList.addEventListener('mouseenter', (e) => {
+      const card = e.target.closest('.work-card');
+      if (card) {
+        card.classList.add('hovering');
+      }
+    }, true);
+
+    worksList.addEventListener('mouseleave', (e) => {
+      const card = e.target.closest('.work-card');
+      if (card) {
+        card.classList.remove('hovering');
+      }
+    }, true);
+  }
+
   // 导航链接事件
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {

@@ -2,7 +2,8 @@ const SITE_DATA = {
   works: [
     { id: '01', title: '博客', tag: '文章 / 思考', url: 'https://cons8.github.io/blog/' },
     { id: '02', title: '墨枢', tag: '实验 / 小工具', url: 'https://cons8.github.io/r/' },
-    { id: '03', title: '剂录', tag: 'APP / 用药记录', url: 'https://github.com/cons8/medirecord-release' }
+    { id: '03', title: '剂录', tag: 'APP / 用药记录', url: 'https://github.com/cons8/medirecord-release' },
+    { id: '04', title: 'NoteBase', tag: 'Web / 文章剪藏', url: 'https://cons8.github.io/NoteBase/' }
   ],
   frontEndLinks: [
     { id: '01', title: 'MDN', tag: 'Web 文档', url: 'https://developer.mozilla.org/' },
@@ -23,5 +24,8 @@ const SITE_DATA = {
     { id: '08', title: 'Docker', tag: '容器化', url: 'https://docker.com/' },
     { id: '09', title: 'Kubernetes', tag: '容器编排', url: 'https://kubernetes.io/' },
     { id: '10', title: 'Nacos', tag: '服务发现与配置', url: 'https://nacos.io/' }
+  ],
+  devToolsLinks: [
+    { id: '01', title: 'Claude Code', tag: 'AI 编程', url: 'https://code.claude.com/docs/zh-CN/overview' }
   ]
 };

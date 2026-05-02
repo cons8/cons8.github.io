@@ -56,6 +56,7 @@ body::before {
     linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
   background-size: 80px 80px;
+  will-change: contents;
 }
 
 /* ==================== 导航 ==================== */
@@ -141,14 +142,14 @@ body::before {
   padding: 0 60px;
   position: relative;
   scroll-snap-align: start;
-  transition: filter 0.6s ease, opacity 0.6s ease;
+  transition: opacity 0.6s ease;
   z-index: 1;
 }
 
 .section.blurred {
-  filter: blur(8px);
-  opacity: 0.25;
+  opacity: 0.15;
   pointer-events: none;
+  will-change: opacity;
 }
 
 .section + .section {
@@ -305,6 +306,22 @@ body::before {
   transform: scaleX(1);
 }
 
+/* About 聚光灯效果 - 独立 fixed 元素 */
+.spotlight {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232, 200, 122, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+}
+
 /* ==================== Works 区块 ==================== */
 .works-header {
   display: flex;
@@ -345,6 +362,7 @@ body::before {
   transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
   overflow: hidden;
+  will-change: transform;
 }
 
 .work-card::before {

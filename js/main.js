@@ -1,3 +1,4 @@
+// ---- 渲染作品卡片 ----
 function renderWorks() {
   const worksContainer = document.getElementById('works-list');
   if (!worksContainer) return;
@@ -9,140 +10,149 @@ function renderWorks() {
         <span class="card-title">${work.title}</span>
         <span class="card-tag">${work.tag}</span>
       </div>
-      <div class="card-img-placeholder">
-        <span>↗</span>
-      </div>
+      <div class="card-img-placeholder"></div>
       <span class="card-arrow">↗</span>
     </a>
   `).join('');
 }
 
-function getCurrentSection() {
-  const sections = document.querySelectorAll('.section');
-  const scrollTop = window.scrollY;
-  const windowH = window.innerHeight;
+// 缓存 DOM 引用
+const sections = document.querySelectorAll('.section');
+const dots = document.querySelectorAll('.scroll-dot');
+const slideNumber = document.getElementById('slide-number');
+const worksList = document.getElementById('works-list');
+const aboutSection = document.querySelector('.about');
 
-  for (let i = sections.length - 1; i >= 0; i--) {
-    if (scrollTop >= sections[i].offsetTop - windowH * 0.4) {
-      return i;
+let currentSection = 0;
+
+// ---- Section 可见性检测 ----
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const idx = Array.from(sections).indexOf(entry.target);
+      if (idx !== currentSection) {
+        currentSection = idx;
+        updateUI();
+      }
     }
+  });
+}, {
+  threshold: 0.4
+});
+
+sections.forEach(s => sectionObserver.observe(s));
+
+function updateUI() {
+  // 更新模糊效果
+  sections.forEach((s, i) => {
+    s.classList.toggle('blurred', i !== currentSection);
+  });
+
+  // 更新页码
+  if (slideNumber) {
+    slideNumber.textContent = `${String(currentSection + 1).padStart(2, '0')} / ${String(sections.length).padStart(2, '0')}`;
   }
-  return 0;
-}
 
-function updateBlur() {
-  const sections = document.querySelectorAll('.section');
-  const current = getCurrentSection();
-
-  sections.forEach((section, i) => {
-    if (i === current) {
-      section.classList.remove('blurred');
-    } else {
-      section.classList.add('blurred');
-    }
-  });
-}
-
-function updatePageNumber() {
-  const current = getCurrentSection();
-  const sections = document.querySelectorAll('.section');
-  const slideNumber = document.getElementById('slide-number');
-  if (!slideNumber) return;
-
-  slideNumber.textContent = `${String(current + 1).padStart(2, '0')} / ${String(sections.length).padStart(2, '0')}`;
-}
-
-function updateDots() {
-  const current = getCurrentSection();
-  const dots = document.querySelectorAll('.scroll-dot');
-
+  // 更新指示点
   dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === current);
+    dot.classList.toggle('active', i === currentSection);
   });
 }
 
+// ---- 跳转到指定区块 ----
 function goToSection(index) {
-  const sections = document.querySelectorAll('.section');
   if (index >= 0 && index < sections.length) {
     sections[index].scrollIntoView({ behavior: 'smooth' });
   }
 }
 
-function handleScroll() {
-  updateBlur();
-  updatePageNumber();
-  updateDots();
-}
-
+// ---- 键盘导航 ----
 function handleKeydown(e) {
-  const current = getCurrentSection();
+  const terminalInput = document.getElementById('terminal-input');
+  if (terminalInput && terminalInput.contains(document.activeElement)) return;
 
   if (e.key === 'ArrowDown' || e.key === 'PageDown') {
     e.preventDefault();
-    goToSection(current + 1);
+    goToSection(currentSection + 1);
   } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
     e.preventDefault();
-    goToSection(current - 1);
+    goToSection(currentSection - 1);
   } else if (e.key === 'Home') {
     e.preventDefault();
     goToSection(0);
   } else if (e.key === 'End') {
     e.preventDefault();
-    goToSection(document.querySelectorAll('.section').length - 1);
+    goToSection(sections.length - 1);
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderWorks();
+// ---- Works 卡片鼠标跟随 ----
+if (worksList) {
+  worksList.addEventListener('mousemove', (e) => {
+    const card = e.target.closest('.work-card');
+    if (card) {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+      card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+    }
+  });
 
-  updateBlur();
-  updatePageNumber();
-  updateDots();
+  worksList.addEventListener('mouseover', (e) => {
+    const card = e.target.closest('.work-card');
+    if (card) card.classList.add('hovering');
+  });
 
-  const dots = document.querySelectorAll('.scroll-dot');
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const index = parseInt(dot.dataset.index);
-      goToSection(index);
+  worksList.addEventListener('mouseout', (e) => {
+    const card = e.target.closest('.work-card');
+    if (card) card.classList.remove('hovering');
+  });
+}
+
+// ---- About 聚光灯 ----
+let spotlight = null;
+let rafPendingSpotlight = false;
+
+if (aboutSection) {
+  spotlight = document.createElement('div');
+  spotlight.className = 'spotlight';
+  document.body.appendChild(spotlight);
+
+  aboutSection.addEventListener('mousemove', (e) => {
+    if (rafPendingSpotlight) return;
+    rafPendingSpotlight = true;
+    requestAnimationFrame(() => {
+      spotlight.style.left = e.clientX + 'px';
+      spotlight.style.top = e.clientY + 'px';
+      rafPendingSpotlight = false;
     });
   });
 
-  // 卡片鼠标跟随光效
-  const worksList = document.getElementById('works-list');
-  if (worksList) {
-    worksList.addEventListener('mousemove', (e) => {
-      const card = e.target.closest('.work-card');
-      if (card) {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty('--mouse-x', x + 'px');
-        card.style.setProperty('--mouse-y', y + 'px');
-      }
+  aboutSection.addEventListener('mouseenter', () => {
+    spotlight.style.opacity = '1';
+  });
+
+  aboutSection.addEventListener('mouseleave', () => {
+    spotlight.style.opacity = '0';
+  });
+}
+
+// ---- 初始化 ----
+document.addEventListener('DOMContentLoaded', () => {
+  renderWorks();
+  updateUI();
+
+  // 点击指示点跳转
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goToSection(parseInt(dot.dataset.index));
     });
+  });
 
-    worksList.addEventListener('mouseenter', (e) => {
-      const card = e.target.closest('.work-card');
-      if (card) {
-        card.classList.add('hovering');
-      }
-    }, true);
-
-    worksList.addEventListener('mouseleave', (e) => {
-      const card = e.target.closest('.work-card');
-      if (card) {
-        card.classList.remove('hovering');
-      }
-    }, true);
-  }
-
-  // 导航链接事件
+  // 导航链接
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       const page = parseInt(link.dataset.page);
       goToSection(page);
-
-      // 如果是 About（第四页），发送 about 命令
       if (page === 3) {
         setTimeout(() => {
           const input = document.getElementById('terminal-input');
@@ -156,6 +166,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-window.addEventListener('scroll', handleScroll, { passive: true });
-window.addEventListener('resize', handleScroll, { passive: true });
 window.addEventListener('keydown', handleKeydown);

@@ -57,6 +57,12 @@ function updateUI() {
   dots.forEach((dot, i) => {
     dot.classList.toggle('active', i === currentSection);
   });
+
+  // 最后一页隐藏导航、指示点、页码
+  const isLastSection = currentSection === sections.length - 1;
+  document.querySelector('.nav-header').style.opacity = isLastSection ? '0' : '1';
+  document.querySelector('.scroll-dots').style.opacity = isLastSection ? '0' : '1';
+  if (slideNumber) slideNumber.style.opacity = isLastSection ? '0' : '1';
 }
 
 // ---- 跳转到指定区块 ----

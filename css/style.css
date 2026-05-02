@@ -79,22 +79,7 @@ body::before {
   text-transform: uppercase;
   color: var(--accent);
   cursor: pointer;
-  position: relative;
-}
-
-.logo::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.logo:hover::after {
-  width: 100%;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -111,26 +96,11 @@ body::before {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-family: var(--font-mono);
-  position: relative;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--accent);
-  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  text-decoration: none;
 }
 
 .nav-link:hover {
   color: var(--accent);
-}
-
-.nav-link:hover::after {
-  width: 100%;
 }
 
 /* ==================== 通用区块 ==================== */
@@ -186,6 +156,7 @@ body::before {
   display: block;
   position: relative;
   overflow: hidden;
+  cursor: default;
 }
 
 .hero-title .line::after {
@@ -1077,4 +1048,35 @@ body::before {
   .about-text {
     letter-spacing: 0;
   }
+}
+
+/* ==================== Logo 区块 ==================== */
+.logo-section {
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: clamp(60px, 12vw, 120px);
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.logo-text {
+  font-size: clamp(80px, 15vw, 200px);
+  font-weight: 900;
+  font-family: var(--font-mono);
+  letter-spacing: -2px;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.logo-section:hover .logo-img {
+  filter: contrast(1.2);
 }
